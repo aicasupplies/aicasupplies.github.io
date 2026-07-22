@@ -1,0 +1,962 @@
+/* ============================================================
+   AICA SUPPLIES — Landing Page
+   Estilo: Editorial Moderno / Old School Tattoo
+   ============================================================ */
+
+:root {
+  /* Paleta de marca (Brand Guidelines) */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-red: #C72429;
+  --color-teal: #1C7567;
+  --color-blue: #368CBF;
+  --color-cream: #F7EED2;
+
+  /* Tipografía */
+  --font-display: 'Cloister Black', 'UnifrakturMaguntia', cursive;
+  --font-body: 'Inter', sans-serif;
+
+  /* UI */
+  --border-thick: 4px;
+  --shadow-hard: 8px 8px 0 var(--color-black);
+  --shadow-hard-sm: 5px 5px 0 var(--color-black);
+  --radius: 0px;
+
+  --container-width: 1200px;
+}
+
+.quick-links-container{
+  --border-thick: 0px;
+}
+
+/* ---------- Reset ---------- */
+* , *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-white);
+  color: var(--color-black);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { text-decoration: none; color: inherit; }
+
+ul { list-style: none; }
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.95rem;
+  padding: 16px 32px;
+  border: var(--border-thick) solid var(--color-black);
+  box-shadow: var(--shadow-hard-sm);
+  background: var(--color-white);
+  color: var(--color-black);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0 var(--color-black);
+}
+
+.btn:active {
+  transform: translate(5px, 5px);
+  box-shadow: 0 0 0 var(--color-black);
+}
+
+.btn-primary {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+.btn-outline {
+  background: var(--color-white);
+  color: var(--color-black);
+}
+
+.btn-mini {
+  padding: 10px 20px;
+  font-size: 0.75rem;
+  box-shadow: 4px 4px 0 var(--color-black);
+}
+
+.btn-small {
+  padding: 12px 22px;
+  font-size: 0.8rem;
+}
+
+.btn-price-list {
+  background: var(--color-red);
+  color: var(--color-white);
+  font-size: 1.2rem;
+  padding: 24px 48px;
+  box-shadow: 10px 10px 0 var(--color-black);
+  border-width: 5px;
+}
+
+.btn-price-list:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 4px 4px 0 var(--color-black);
+}
+
+/* ---------- Header / Nav ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--color-white);
+  border-bottom: var(--border-thick) solid var(--color-black);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: var(--border-thick) solid var(--color-black);
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  background: var(--color-black);
+  width: 22px;
+  margin: 0 auto;
+}
+
+.main-nav {
+  display: flex;
+  gap: 32px;
+}
+
+.main-nav a {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  position: relative;
+  padding-bottom: 4px;
+}
+
+.main-nav a.nav-cta {
+  background: var(--color-red);
+  color: var(--color-white);
+  border: 3px solid var(--color-black);
+  box-shadow: 3px 3px 0 var(--color-black);
+  padding: 8px 18px;
+  margin-left: 8px;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.main-nav a.nav-cta:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--color-black);
+}
+
+.main-nav a.nav-cta::after {
+  display: none;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: var(--color-red);
+  transition: width 0.2s ease;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  color: var(--color-white);
+  background: var(--color-black);
+  overflow: visible !important; /* Permite que el menú de sucursales salga del Hero sin cortarse */
+  padding: 80px 0px;
+}
+
+.hero-splatter {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(199,36,41,0.35) 0, rgba(199,36,41,0.35) 6px, transparent 7px),
+    radial-gradient(circle at 92% 30%, rgba(199,36,41,0.35) 0, rgba(199,36,41,0.35) 10px, transparent 11px),
+    radial-gradient(circle at 8% 80%, rgba(199,36,41,0.25) 0, rgba(199,36,41,0.25) 8px, transparent 9px),
+    radial-gradient(circle at 15% 90%, rgba(199,36,41,0.25) 0, rgba(199,36,41,0.25) 4px, transparent 5px);
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.eyebrow, .section-eyebrow {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-red);
+  font-size: 0.85rem;
+  margin-bottom: 12px;
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 8vw, 5.5rem);
+  line-height: 1.3;
+  letter-spacing: 0.015em;
+  padding-top: 0.15em;
+  margin-bottom: 12px;
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-cream);
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  max-width: 46ch;
+  color: #d9d9d9;
+  margin-bottom: 32px;
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero .btn-outline {
+  background: transparent;
+  color: var(--color-white);
+  border-color: var(--color-white);
+  box-shadow: 5px 5px 0 var(--color-red);
+}
+
+.hero .btn-outline:hover {
+  box-shadow: 2px 2px 0 var(--color-red);
+}
+
+/* Selector de sucursal para el botón de WhatsApp del Hero */
+.whatsapp-cta {
+  position: relative;
+}
+
+.whatsapp-cta .btn {
+  font-family: var(--font-body);
+}
+
+.whatsapp-options {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 240px;
+  background: var(--color-white);
+  border: var(--border-thick) solid var(--color-black);
+  box-shadow: var(--shadow-hard-sm);
+  z-index: 99999 !important; /* Subimos el z-index para que flote libre sobre todo */
+  height: auto !important;    /* Fuerza a la caja a estirarse completa con el texto */
+}
+
+.whatsapp-options[hidden] {
+  display: none;
+}
+
+/* LA MAGIA DEL MOUSE: Abre el menú SOLO cuando tocan o pasan por el botón */
+.whatsapp-cta:hover .whatsapp-options {
+  display: block !important;
+}
+/* El puente invisible para que el mouse no se pierda en el aire de 12px */
+.whatsapp-options::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+}
+.whatsapp-options a {
+  display: block;
+  padding: 14px 18px;
+  color: var(--color-black);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.whatsapp-options a + a {
+  border-top: 2px solid var(--color-black);
+}
+
+.whatsapp-options a:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 420px;
+  filter: drop-shadow(0 0 28px rgba(199, 36, 41, 0.35));
+}
+
+/* ---------- Secciones genéricas ---------- */
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  margin-bottom: 12px;
+}
+
+.section-subtitle {
+  color: #333;
+  max-width: 60ch;
+  margin-bottom: 48px;
+}
+
+.categories {
+  padding: 96px 0;
+  background: var(--color-white);
+}
+
+/* ---------- Vitrina de Categorías ---------- */
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.category-card {
+  background: var(--color-cream);
+  border: var(--border-thick) solid var(--color-black);
+  box-shadow: var(--shadow-hard);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.category-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 11px 11px 0 var(--color-black);
+}
+
+.category-img-wrap {
+  aspect-ratio: 4 / 3;
+  border-bottom: var(--border-thick) solid var(--color-black);
+  background: var(--color-teal);
+  overflow: hidden;
+}
+
+.category-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.category-body h3 {
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.category-body p {
+  font-size: 0.9rem;
+  color: #222;
+  flex: 1;
+}
+
+.category-body .btn {
+  align-self: flex-start;
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.category-body .btn:hover {
+  background: var(--color-red);
+}
+
+/* ---------- Lista de Precios ---------- */
+.price-list {
+  background: var(--color-teal);
+  color: var(--color-white);
+  padding: 20px 0px 25px;
+  text-align: center;
+  border-top: var(--border-thick) solid var(--color-black);
+  border-bottom: var(--border-thick) solid var(--color-black);
+  margin-top: 15px;
+}
+
+.price-list-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-list-eyebrow {
+  color: var(--color-cream);
+}
+
+.price-list-title {
+  color: var(--color-white);
+}
+
+.price-list-text {
+  max-width: 60ch;
+  margin-bottom: 40px;
+  color: #eafaf5;
+}
+
+/* ---------- Sucursales ---------- */
+.branches {
+  padding: 40px 0;
+  background: var(--color-white);
+}
+
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.branch-card {
+  background: var(--color-white);
+  border: var(--border-thick) solid var(--color-black);
+  box-shadow: var(--shadow-hard);
+  padding: 32px;
+}
+
+.branch-card h3 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.branch-address {
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.branch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ---------- Página Catálogo (catalogo.html) ---------- */
+.catalog-hero {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding: 64px 0 40px;
+}
+
+.catalog-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 6vw, 4rem);
+  line-height: 1.3;
+  letter-spacing: 0.015em;
+  padding-top: 0.1em;
+  margin-bottom: 16px;
+}
+
+.catalog-hero .hero-desc {
+  color: #d9d9d9;
+  max-width: 65ch;
+}
+
+/* Accesos directos: barra de pill-buttons */
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  background: var(--color-cream);
+  border-bottom: var(--border-thick) solid var(--color-black);
+}
+
+.pill-link {
+  border: 3px solid var(--color-black);
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  background: var(--color-white);
+  color: var(--color-black);
+  box-shadow: 4px 4px 0 var(--color-black);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.pill-link:hover {
+  background: var(--color-red);
+  color: var(--color-white);
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--color-black);
+}
+
+/* Bloques de categoría */
+.catalog-category {
+  border: var(--border-thick) solid var(--color-black);
+  box-shadow: var(--shadow-hard);
+  background: var(--color-white);
+  margin: 64px 0;
+  scroll-margin-top: 100px;
+}
+
+
+
+.catalog-photo-wrap {
+  aspect-ratio: 21 / 8;
+  background: var(--color-teal);
+  border-bottom: var(--border-thick) solid var(--color-black);
+  overflow: hidden;
+}
+
+.catalog-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catalog-titlebar {
+  background: var(--color-black);
+  border-bottom: var(--border-thick) solid var(--color-black);
+  padding: 20px 32px;
+}
+
+.catalog-titlebar h2 {
+  font-family: var(--font-display);
+  color: var(--color-white);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.3;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 32px;
+  border-bottom: 2px solid #ececec;
+  transition: background 0.15s ease;
+}
+
+.product-row:last-child {
+  border-bottom: none;
+}
+
+.product-row:hover {
+  background: var(--color-cream);
+}
+
+.product-info h3 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.product-info p {
+  font-size: 0.85rem;
+  color: #444;
+  max-width: 62ch;
+}
+
+.product-row .btn {
+  flex-shrink: 0;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  background: var(--color-black);
+  color: var(--color-white);
+  padding-top: 64px;
+}
+
+.footer-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #333;
+}
+
+.footer-logo {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.footer-name {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+}
+
+.footer-tagline {
+  color: var(--color-cream);
+  font-size: 0.85rem;
+}
+
+.footer-heading {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--color-red);
+  margin-bottom: 16px;
+}
+
+.footer-social a,
+.footer-contact a {
+  display: block;
+  margin-bottom: 8px;
+  color: #d9d9d9;
+}
+
+.footer-instagram {
+  font-weight: 700;
+  color: var(--color-white) !important;
+}
+
+.footer-social a:hover,
+.footer-contact a:hover {
+  color: var(--color-red);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* ============================================================
+   RESPONSIVE — Mobile First adjustments
+   ============================================================ */
+@media (max-width: 960px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-desc {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    border-bottom: var(--border-thick) solid var(--color-black);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .main-nav.open {
+    max-height: 420px;
+  }
+
+  .main-nav a {
+    padding: 16px 24px;
+    border-top: 1px solid #eee;
+  }
+
+  .main-nav a.nav-cta {
+    margin: 8px 24px;
+    text-align: center;
+    box-shadow: 3px 3px 0 var(--color-black);
+  }
+
+  .categories-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branches-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .branch-actions {
+    flex-direction: column;
+  }
+
+  .branch-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .product-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .product-row .btn {
+    align-self: stretch;
+    text-align: center;
+  }
+
+  .catalog-photo-wrap {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    padding: 56px 0;
+  }
+
+  .btn-price-list {
+    font-size: 1rem;
+    padding: 18px 28px;
+  }
+}
+
+@media (max-width: 425px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .category-img-wrap {
+    aspect-ratio: 1 / 1;
+  }
+
+  .category-body {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .category-body h3 {
+    font-size: 0.8rem;
+  }
+
+  .category-body p {
+    display: none;
+  }
+
+  .category-body .btn {
+    font-size: 0.65rem;
+    padding: 10px 14px;
+  }
+}
+/* ============================================================
+   CATÁLOGO MÓVIL OPTIMIZADO (1 Columna limpia y fluida)
+   ============================================================ */
+@media (max-width: 720px) {
+  /* 1. Volvemos a 1 columna amplia para que no queden huecos feos */
+  .catalog-grid-container {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    padding: 0 12px !important;
+  }
+
+  /* 2. Tarjeta con márgenes prolijos */
+  .catalog-category {
+    margin: 13px !important;
+  }
+
+  /* 3. Portada en proporción armoniosa */
+  .catalog-photo-wrap {
+    aspect-ratio: 16 / 7 !important;
+  }
+
+  /* 4. Título gótico centrado y legible */
+  .catalog-titlebar {
+    padding: 12px 16px !important;
+    text-align: center;
+  }
+
+  .catalog-titlebar h2 {
+    font-size: 1.3rem !important;
+  }
+
+  /* 5. Filas de productos limpias y ordenadas */
+  .product-row {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 12px 16px !important;
+    gap: 12px !important;
+  }
+
+  .product-name {
+    font-size: 0.85rem !important;
+    font-weight: 700;
+  }
+
+  /* Ocultamos las descripciones largas en celular para ganar velocidad visual */
+  .product-tooltip p {
+    display: none !important;
+  }
+
+  /* Botón adaptado a pantalla táctil */
+  .btn-price-row {
+    font-size: 0.7rem !important;
+    padding: 8px 12px !important;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .quick-links-container {
+    padding: 0rem !important;
+  }
+}
+/* ============================================================
+   SOLUCIÓN MÓVIL: Convierte los 2 divs en 3 filas impecables
+   ============================================================ */
+@media (max-width: 720px) {
+  /* 1. Prepara el contenedor principal en celular */
+  nav.quick-links {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* Fuerza 3 columnas = 3 filas */
+    gap: 8px 5px !important;
+    padding: 16px 8px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2. CLAVE: Desactiva los dos divs contenedores SOLO EN CELULAR */
+  nav.quick-links > div {
+    display: contents !important; /* Desarma la Fila 1 y Fila 2 del HTML para que los 9 botones se unan */
+  }
+
+  /* 3. Acomoda cada botón (píldora) para que sea 100% legible */
+  nav.quick-links a.pill-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    min-height: 44px !important;
+    font-size: 0.52rem !important;
+    font-weight: 800 !important;
+    padding: 4px 2px !important;
+    border-radius: 8px !important;
+    box-shadow: 2px 2px 0 var(--color-black) !important;
+    white-space: normal !important; /* Deja que el texto use 2 renglones en la píldora si es necesario */
+    word-break: normal !important;
+    line-height: 1.1 !important;
+    box-sizing: border-box !important;
+  }
+}

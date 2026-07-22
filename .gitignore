@@ -1,0 +1,13 @@
+# Credenciales de Google OAuth (nunca subir)
+credentials.json
+token.json
+
+# Dependencias de Node
+node_modules/
+
+# Archivos temporales/regenerables
+.tmp/
+
+# Basura del sistema operativo
+Thumbs.db
+.DS_Store

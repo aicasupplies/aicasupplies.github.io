@@ -1,0 +1,49 @@
+﻿Brand Guidelines: Aica Supplies
+Manual de Identidad Visual para Desarrollo (VS Code / Claude Code)
+1. Identidad y Concepto
+* Nombre de la marca: Aica Supplies (Insumos Tattoo)
+* Estilo visual: Tradicional / Neo-tradicional de tatuaje (Old School influence), tipografía gótica/fraktur, estética de alto contraste e impacto visual.
+* Elementos clave: Máquina de tatuar de bobinas, aguja/puntero prominente, ojo central con destellos radiales, salpicaduras de tinta/sangre, y banners clásicos de pergamino.
+2. Paleta de Colores (Color Palette)
+Códigos hexadecimales extraídos directamente del diseño para su implementación en CSS, Tailwind o SASS:
+Color
+	Hex Code
+	Uso Sugerido en UI
+	Negro Sólido
+	#000000
+	Fondos principales (Dark mode), textos, bordes gruesos.
+	Blanco Puro
+	#FFFFFF
+	Fondo de contraste (Light mode), textos sobre fondo oscuro.
+	Rojo Sangre
+	#C72429
+	Botones de acción, alertas, elementos hover, acentos vivos.
+	Verde Azulado / Teal
+	#1C7567
+	Elementos secundarios, fondos de tarjetas, branding alternativo.
+	Azul Eléctrico (Ojo)
+	#368CBF
+	Detalles muy específicos, enlaces activos o sutiles toques de luz.
+	Pergamino / Crema
+	#F7EED2
+	Fondos de contenedores, inputs, estilo vintage.
+	3. Tipografía (Typography)
+Fuentes Principales (Logo/Títulos de Impacto)
+* Estilo: Blackletter / Gothic / Fraktur (para el nombre principal "Aica Supplies").
+* Alternativa web/Google Fonts: UnifrakturMaguntia, Cloister Black o Chomsky.
+* Uso: Solo para títulos principales ($H1$) muy específicos o encabezados de secciones de estilo urbano/tattoo.
+Fuente Secundaria (Subtítulos / Banners)
+* Estilo: Manuscrita / Cursiva tradicional de tatuaje (para "Insumos tattoo").
+* Alternativa web/Google Fonts: Mrs Saint Delafield, Great Vibes, o tipografías tipo Tattoo Script.
+Fuente de Interfaz / Cuerpo de Texto
+* Estilo: Sans-serif limpia, ligeramente informal o de trazo constante (como la usada en la dirección del logo).
+* Alternativa web/Google Fonts: Architects Daughter, Patrick Hand, o para máxima legibilidad comercial, una Sans estándar como Inter o Poppins.
+4. Elementos de Diseño y UI (UI Design System)
+* Bordes (Borders): Usar bordes negros gruesos (border-4 border-black en Tailwind) para emular el delineado (linework) del estilo del tatuaje.
+* Sombras (Shadows): Sombras duras y planas sin difuminado (estilo cómic/pop-art) en lugar de sombras suaves.
+* Formas: Formas orgánicas con salpicaduras (splatters) para secciones especiales o banners con bordes cortados en diagonal/puntas simulando el pergamino.
+5. Información de Contacto / Footer (Hardcoded Data)
+Para implementar directamente en los componentes de contacto o pie de página:
+* Instagram: @aicasupplies
+* Sucursal 1: Boedo 236 - Local 48 - Lomas de Zamora
+* Sucursal 2: Rivadavia 112 - Local 10 - Quilmes
