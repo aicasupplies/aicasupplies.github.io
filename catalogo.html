@@ -36,8 +36,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 .product-row:hover .product-tooltip {  display : block; }
 .product-tooltip img {  width : 100%;  height : auto;  border-radius : 10px;  object-fit : cover;  margin-bottom : 0.85rem; border: 2px solid #000000; }
 .product-tooltip p {  margin : 0;  font-size : 0.95rem;  line-height : 1.5;  color : #000000; font-weight: 500; }
-.btn-price-row {  display : inline-flex;  align-items : center;  justify-content : center;  padding : 0.7rem 1.2rem; border : 3px solid #000000;  background : #ffffff;  color : #000000;  border-radius : 12px;  box-shadow : 3px 3px 0px #000000; text-decoration : none;  text-transform : uppercase;  font-weight : 800;  letter-spacing : 0.04em;  transition : transform .1s ease, box-shadow .1s ease; font-size: 0.85rem; }
+.btn-price-row {  display : inline-flex;  align-items : center;  justify-content : center;  padding : 0.7rem 1.2rem; border : 3px solid #000000;  background : #ffffff;  color : #000000;  border-radius : 12px;  box-shadow : 3px 3px 0px #000000; text-decoration : none;  text-transform : uppercase;  font-weight : 800;  letter-spacing : 0.04em;  transition : transform .1s ease, box-shadow .1s ease; font-size: 0.85rem; cursor: pointer; font-family: inherit; }
 .btn-price-row:hover {  transform : translate(-1px, -1px);  box-shadow : 4px 4px 0px #000000; background: #fdfbf7; }
+.price-actions {  display : flex;  flex-direction : column;  align-items : flex-end;  gap : 0.5rem; }
+.precio-resultado {  font-size : 0.85rem;  font-weight : 700;  color : #000000;  text-align : right; }
 
 @media ( max-width : 900px) {
 .product-row {  grid-template-columns : 1fr; gap: 0.5rem; }
@@ -112,7 +114,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Dynamic pigmento.jpg" alt="Dynamic" loading="lazy">
 <p>Pigmento negro en 1oz y 8oz.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A2:D3" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="0" data-producto="Dynamic">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Inkplay</span>
@@ -120,7 +125,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/inkplay pigmento.png" alt="Inkplay" loading="lazy">
 <p>Negro línea 1oz y 8oz. Triple Black 1oz y 8oz.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A4:D7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="0" data-producto="Inkplay">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Extreme</span>
@@ -128,7 +136,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/extreme pigmento.png" alt="Extreme" loading="lazy">
 <p>Pigmentos 1oz y 2oz. Sets de grises, pastel y pieles.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A8:D12" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="0" data-producto="Extreme">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Drakkar</span>
@@ -136,7 +147,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Drakkar.png" alt="Drakkar" loading="lazy">
 <p>Negro 4oz y 8oz. Pigmentos color 1oz. Negro versátil 1oz. Sets de pastel, grises y pieles. Diluyente para color.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A13:D20" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="0" data-producto="Drakkar">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Klug</span>
@@ -144,7 +158,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/klug pigmento.webp" alt="Klug" loading="lazy">
 <p>Versátil Black Ink 1oz, 4oz y 8oz. Triple Black 4oz y 8oz.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A21:D25" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="0" data-producto="Klug">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -161,7 +178,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/cartuchos de aguja yellow dragonfly.jpg" alt="Yellow Dragonfly" loading="lazy">
 <p>Series M1, RL, RS y RM en medidas variadas (1201 a 1214+). Caja cerrada x20, unidad suelta o caja surtida.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A2:D10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="327162138" data-producto="Yellow Dragonfly">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Spark</span>
@@ -169,7 +189,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/cartuchos de aguja spark rl.webp" alt="Spark" loading="lazy">
 <p>RL 1203, RL 1205-1207, RS 1207-1209, MG/RM 1207-1215. Caja cerrada x20, unidad o caja surtida.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A11:D17" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="327162138" data-producto="Spark">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Cartuchos EZ</span>
@@ -177,7 +200,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/cartuchos de aguja EZ.webp" alt="Cartuchos EZ" loading="lazy">
 <p>RL 1203, 1205, 1207 y 1209. Caja cerrada x20.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A18:D25" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="327162138" data-producto="Cartuchos EZ">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -194,7 +220,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/CAJA BLANCA CAJA CERRADA 50 UNIDADES.webp" alt="Caja Blanca" loading="lazy">
 <p>RL, RS, MG y RM en medidas variadas. Caja cerrada de 50 unidades (10 blísters), blister, unidad o caja surtida.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=973212223#gid=973212223&range=A2:D13" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="973212223" data-producto="Caja Blanca">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Hurricane</span>
@@ -202,7 +231,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/AGUJAS TRADICIONALES HURRICANE.png" alt="Hurricane" loading="lazy">
 <p>RL 1205-1207-1209. Presentación blister.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=973212223#gid=973212223&range=A14:D15" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="973212223" data-producto="Hurricane">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -219,7 +251,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Tips descartables.jpg" alt="Tips descartables" loading="lazy">
 <p>RL and MG en medidas variadas (1203 a 1218). Caja cerrada x50, blister, unidad o caja surtida.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A2:D6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Tips descartables">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Tips de acero</span>
@@ -227,7 +262,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Tips de acero.webp" alt="Tips de acero" loading="lazy">
 <p>Línea reusable de acero quirúrgico.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A7:D7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Tips de acero">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Punteras descartables N&N</span>
@@ -235,7 +273,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Punteras descartables N&N.png" alt="Punteras descartables N&N" loading="lazy">
 <p>Unidad suelta, bolsa cerrada x25 o bolsa surtida x25.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A8:D10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Punteras descartables N&amp;N">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Punteras descartables Inkplay</span>
@@ -243,7 +284,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/punteras descartables inkplay.png" alt="Punteras descartables Inkplay" loading="lazy">
 <p>Unidad suelta o caja x15.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A11:D12" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Punteras descartables Inkplay">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Punteras de acero</span>
@@ -251,7 +295,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/punteras de acero.png" alt="Punteras de acero" loading="lazy">
 <p>Medidas 19mm, 25mm y 32mm. Incluye cepillo para limpieza.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A13:D16" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Punteras de acero">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Adaptador de cartuchos</span>
@@ -259,7 +306,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Adaptador de cartuchos.jpg" alt="Adaptador de cartuchos" loading="lazy">
 <p>Convierte máquina de puntera tradicional a sistema de cartuchos.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A17:D17" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Adaptador de cartuchos">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -276,7 +326,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Campos de protección ktex..jpg" alt="Campos de protección" loading="lazy">
 <p>Negros x50, de color x50, cajas x100 y packs x5.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A2:D5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Campos de protección">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Film adherente / protector</span>
@@ -284,7 +337,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Film adherente protector.png" alt="Film adherente / protector" loading="lazy">
 <p>Rollo x300 mts.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A6:D6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Film adherente / protector">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Descartador de agujas (biohazard)</span>
@@ -292,7 +348,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Descartador de agujas (biohazard).jpg" alt="Descartador de agujas (biohazard)" loading="lazy">
 <p>Presentaciones de 1L y 2L.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A7:D8" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Descartador de agujas (biohazard)">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Baja lengua de madera</span>
@@ -300,7 +359,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Baja lengua de madera.jpg" alt="Baja lengua de madera" loading="lazy">
 <p>Packs x100 y x20.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A9:D10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Baja lengua de madera">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Guantes de látex</span>
@@ -308,7 +370,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Guantes de látex.jpg" alt="Guantes de látex" loading="lazy">
 <p>Caja completa o pack x5 pares.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A11:D13" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Guantes de látex">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Guantes de nitrilo</span>
@@ -316,7 +381,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Guantes de nitrilo.webp" alt="Guantes de nitrilo" loading="lazy">
 <p>Caja completa o pack x5 pares.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A14:D16" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Guantes de nitrilo">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Cinta hipoalergénica</span>
@@ -324,7 +392,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Cinta hipoalergenica.webp" alt="Cinta hipoalergénica" loading="lazy">
 <p>Caja o unidad.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A17:D18" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Cinta hipoalergénica">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Cubre clipcord</span>
@@ -332,7 +403,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/cubre clip cord.png" alt="Cubre clipcord" loading="lazy">
 <p>Pack x10.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A19:D19" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Cubre clipcord">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Cubre cable / cubre máquina</span>
@@ -340,7 +414,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Cubre cable cubre máquina.webp" alt="Cubre cable / cubre máquina" loading="lazy">
 <p>Pack x10.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A20:D20" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Cubre cable / cubre máquina">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Cinta flex autoadherente</span>
@@ -348,7 +425,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Cinta flex autoadherente.webp" alt="Cinta flex autoadherente" loading="lazy">
 <p>Cinta cohesiva para protección de cables y equipos.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A21:D21" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Cinta flex autoadherente">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Afeitadoras descartables (Xmart)</span>
@@ -356,7 +436,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Afeitadoras descartables (Xmart).webp" alt="Afeitadoras descartables (Xmart)" loading="lazy">
 <p>Unidad, pack x6 o pack x24.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A22:D24" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Afeitadoras descartables (Xmart)">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Film dérmico</span>
@@ -364,7 +447,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Film dérmico Repairing Film Derm.webp" alt="Film dérmico Repairing Film Derm" loading="lazy">
 <p>Repairing Film Derm. Presentación de 1/2 metro y 1 metro.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A25:D26" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Film dérmico">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -381,7 +467,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Inkplay bioseguridad.webp" alt="Inkplay" loading="lazy">
 <p>Línea completa: jabón neutro post-tattoo, crema y crema spray post-tattoo, Tattoo Reviver, solución de higiene, loción piercing, enjuague bucal antibacterial, Stencil Transfer y Stencil Transfer XL, Witch Hazel, Tattoo Cleaner, Foam Pro y Pro Butter.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A2:D11" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Inkplay">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Elephant</span>
@@ -389,7 +478,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/elephant products.png" alt="Elephant" loading="lazy">
 <p>Stencil 70cc, Witch Hazel 60cc y 200cc, Cleaner 300cc, Skin Care y Butter.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A12:D17" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Elephant">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Vaselina</span>
@@ -397,7 +489,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/vaselina.png" alt="Vaselina" loading="lazy">
 <p>Presentaciones de 1kg, mediana y chica.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A18:D20" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Vaselina">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Jabón antibacterial Laclorhex</span>
@@ -405,7 +500,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Jabón antibacterial Laclorhex.jpg" alt="Jabón antibacterial Laclorhex" loading="lazy">
 <p>Presentación x500ml.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A21:D21" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Jabón antibacterial Laclorhex">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Parche dérmico</span>
@@ -413,7 +511,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/parche dérmico.png" alt="Parche dérmico" loading="lazy">
 <p>Medidas 10x12 y 10x25.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A22:D23" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Parche dérmico">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">TKTX</span>
@@ -421,7 +522,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/TKTX.webp" alt="TKTX" loading="lazy">
 <p>Anestésico en formato spray/pocket spray, línea 99,9%.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A24:D25" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="TKTX">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pain Control</span>
@@ -429,15 +533,21 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Pain Control.webp" alt="Pain Control" loading="lazy">
 <p>Gel crema anestésico 30g.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A26:D26" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Pain Control">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
-    <span class="product-name">Antídoto Drakkar</span>
+<span class="product-name">Antídoto Drakkar</span>
     <div class="product-tooltip">
         <img src="fotos para productos/antídoto drakkar.png" alt="Antídoto Drakkar" loading="lazy">
         <p>Para corrección de pigmentos</p>
     </div>
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A27:D27" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+    <div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Antídoto Drakkar">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Papel de transferencia</span>
@@ -445,7 +555,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Papel de transferencia.webp" alt="Papel de transferencia" loading="lazy">
 <p>Papel hecto, papel para termocopiadora, línea Ministerio U-20 Transfer Tattoo y Spirit Classic Thermal.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A28:D29" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Papel de transferencia">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Tetinas (ink caps)</span>
@@ -453,7 +566,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Tetinas (ink caps).webp" alt="Tetinas (ink caps)" loading="lazy">
 <p>Chicas y medianas, packs x100 y x1000. Niples x10 unidades.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A30:D34" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Tetinas (ink caps)">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Piel sintética</span>
@@ -461,7 +577,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Piel sintética.webp" alt="Piel sintética" loading="lazy">
 <p>Práctica en tamaño chico y grande.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A35:D36" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Piel sintética">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Butter Extreme</span>
@@ -469,7 +588,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Butter extreme.webp" alt="Butter Extreme" loading="lazy">
 <p>Manteca post-tattoo de la línea Extreme.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=A37:D37" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Butter Extreme">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -486,7 +608,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Pen 86 Irons.webp" alt="Pen 86 Irons" loading="lazy">
 <p>Máquina tipo Pen.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=A2:D2" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen 86 Irons">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pen mini RCA</span>
@@ -494,7 +619,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Pen mini RCA.jpg" alt="Pen mini RCA" loading="lazy">
 <p>Con conexión RCA.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=A3:D3" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen mini RCA">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pen Spark</span>
@@ -502,7 +630,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/PEN SPARK.jpg" alt="Pen Spark" loading="lazy">
 <p>Máquina inalámbrica.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=A4:D4" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen Spark">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pen Diablo</span>
@@ -510,7 +641,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Pen diablo.png" alt="Pen Diablo" loading="lazy">
 <p>Línea Elephant.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=A5:D5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen Diablo">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pen Alienhead</span>
@@ -518,7 +652,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/pen alienhead.png" alt="Pen Alienhead" loading="lazy">
 <p>Máquina inalámbrica, fabricación Argentina.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=A6:D6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen Alienhead">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Máquinas de bobina y rotativas</span>
@@ -526,7 +663,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/maquina de bobina.png" alt="Máquinas de bobina y rotativas" loading="lazy">
 <p>Modelos tradicionales en varios colores.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=A7:D15" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Máquinas de bobina y rotativas">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Fuentes 2AM y 3AM</span>
@@ -534,7 +674,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Fuentes 2AM y 3AM.png" alt="Fuentes 2AM y 3AM" loading="lazy">
 <p>2AM 15V común, 2AM 15V con voltímetro, 2AM 15V con chapa y 3AM 15V mini.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=A16:D19" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Fuentes 2AM y 3AM">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Termocopiadora</span>
@@ -542,7 +685,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Termocopiadora.jpg" alt="Termocopiadora" loading="lazy">
 <p>Impresora térmica Bluetooth para diseños y stencil.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=A20:D20" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Termocopiadora">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -559,7 +705,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/CLIP CORD SILICONADO.webp" alt="Clip cord" loading="lazy">
 <p>Económico, siliconado, reforzado y DC para máquina Pen.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1014710718#gid=1014710718&range=A2:D5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1014710718" data-producto="Clip cord">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pedal</span>
@@ -567,7 +716,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Pedal.jpg" alt="Pedal" loading="lazy">
 <p>Económico, cuadrado, redondo y reforzado.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1014710718#gid=1014710718&range=A6:D9" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1014710718" data-producto="Pedal">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Cable RCA</span>
@@ -575,7 +727,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Cable RCA.jpg" alt="Cable RCA" loading="lazy">
 <p>Común y reforzado.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1014710718#gid=1014710718&range=A10:D11" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="1014710718" data-producto="Cable RCA">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -592,7 +747,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/Catéteres.webp" alt="Catéteres" loading="lazy">
 <p>Medidas 16g, 18g y 20g. Unidad o caja.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=916622949#gid=916622949&range=A2:D6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="916622949" data-producto="Catéteres">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pinza oval abierta</span>
@@ -600,7 +758,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/PINZA PARA PIERCING OVAL ABIERTA.jpg" alt="Pinza oval abierta" loading="lazy">
 <p>Acero quirúrgico para piercing.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=916622949#gid=916622949&range=A7:D7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="916622949" data-producto="Pinza oval abierta">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pinza triangular abierta</span>
@@ -608,7 +769,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/PINZA TRIANG ABIERTA.png" alt="Pinza triangular abierta" loading="lazy">
 <p>Acero quirúrgico para piercing.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=916622949#gid=916622949&range=A8:D8" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="916622949" data-producto="Pinza triangular abierta">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 <div class="product-row">
 <span class="product-name">Pinza mosquito</span>
@@ -616,7 +780,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <img src="fotos para productos/PINZA MOSQUITO.png" alt="Pinza mosquito" loading="lazy">
 <p>Acero quirúrgico para piercing.</p>
 </div>
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=916622949#gid=916622949&range=A9:D9" target="_blank" rel="noopener" class="btn-price-row">VER PRECIOS</a>
+<div class="price-actions">
+<button class="btn-price-row ver-precio" data-gid="916622949" data-producto="Pinza mosquito">VER PRECIO</button>
+<span class="precio-resultado"></span>
+</div>
 </div>
 </div>
 </section>
@@ -674,6 +841,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 </footer>
 
 <script src="assets/js/script.js"></script>
+<script src="precios.js"></script>
 </body>
 </html>
 
