@@ -122,10 +122,11 @@ ul { list-style: none; }
 .site-header {
   position: sticky;
   top: 0;
-  z-index: 100;
-  background: var(--color-white);
+  z-index: 10000 !important; /* Le da prioridad máxima sobre la tarjeta de producto */
+  background: #ffffff;
   border-bottom: var(--border-thick) solid var(--color-black);
 }
+
 
 .nav-inner {
   display: flex;
@@ -714,7 +715,6 @@ ul { list-style: none; }
   font-size: 0.8rem;
   color: #888;
 }
-
 /* ============================================================
    RESPONSIVE — Mobile First adjustments
    ============================================================ */
@@ -858,11 +858,11 @@ ul { list-style: none; }
     padding: 10px 14px;
   }
 }
+
 /* ============================================================
    CATÁLOGO MÓVIL OPTIMIZADO (1 Columna limpia y fluida)
    ============================================================ */
 @media (max-width: 720px) {
-  /* 1. Volvemos a 1 columna amplia para que no queden huecos feos */
   .catalog-grid-container {
     display: flex !important;
     flex-direction: column !important;
@@ -870,17 +870,14 @@ ul { list-style: none; }
     padding: 0 12px !important;
   }
 
-  /* 2. Tarjeta con márgenes prolijos */
   .catalog-category {
     margin: 13px !important;
   }
 
-  /* 3. Portada en proporción armoniosa */
   .catalog-photo-wrap {
     aspect-ratio: 16 / 7 !important;
   }
 
-  /* 4. Título gótico centrado y legible */
   .catalog-titlebar {
     padding: 12px 16px !important;
     text-align: center;
@@ -890,7 +887,6 @@ ul { list-style: none; }
     font-size: 1.3rem !important;
   }
 
-  /* 5. Filas de productos limpias y ordenadas */
   .product-row {
     display: flex !important;
     flex-direction: row !important;
@@ -905,12 +901,7 @@ ul { list-style: none; }
     font-weight: 700;
   }
 
-  /* Ocultamos las descripciones largas en celular para ganar velocidad visual */
-  .product-tooltip p {
-    display: none !important;
-  }
 
-  /* Botón adaptado a pantalla táctil */
   .btn-price-row {
     font-size: 0.7rem !important;
     padding: 8px 12px !important;
@@ -922,41 +913,44 @@ ul { list-style: none; }
     padding: 0rem !important;
   }
 }
+
 /* ============================================================
-   SOLUCIÓN MÓVIL: Convierte los 2 divs en 3 filas impecables
+   SOLUCIÓN MÓVIL: Swimlane en 2 filas deslizables (<= 425px)
    ============================================================ */
-@media (max-width: 720px) {
-  /* 1. Prepara el contenedor principal en celular */
+@media (max-width: 425px) {
+  /* Habilita el contenedor para scroll horizontal */
+  .quick-links-container {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    width: 100% !important;
+    padding: 12px 0 !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Las 2 filas se apilan verticalmente pero crecen hacia la derecha */
   nav.quick-links {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; /* Fuerza 3 columnas = 3 filas */
-    gap: 8px 5px !important;
-    padding: 16px 8px !important;
-    width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 2. CLAVE: Desactiva los dos divs contenedores SOLO EN CELULAR */
-  nav.quick-links > div {
-    display: contents !important; /* Desarma la Fila 1 y Fila 2 del HTML para que los 9 botones se unan */
-  }
-
-  /* 3. Acomoda cada botón (píldora) para que sea 100% legible */
-  nav.quick-links a.pill-link {
     display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    width: 100% !important;
-    min-height: 44px !important;
-    font-size: 0.52rem !important;
-    font-weight: 800 !important;
-    padding: 4px 2px !important;
-    border-radius: 8px !important;
-    box-shadow: 2px 2px 0 var(--color-black) !important;
-    white-space: normal !important; /* Deja que el texto use 2 renglones en la píldora si es necesario */
-    word-break: normal !important;
-    line-height: 1.1 !important;
-    box-sizing: border-box !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: max-content !important;
+    padding: 0 12px !important;
+  }
+
+  /* Cada fila mantiene sus botones alineados en horizontal */
+  nav.quick-links > div {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 8px !important;
+    width: max-content !important;
+  }
+
+  /* Formato compacto para deslizamiento fluido en celular */
+  nav.quick-links a.pill-link {
+    flex: 0 0 auto !important;
+    white-space: nowrap !important;
+    font-size: 0.75rem !important;
+    padding: 8px 14px !important;
+    border-radius: 999px !important;
+    box-shadow: 3px 3px 0 var(--color-black) !important;
   }
 }

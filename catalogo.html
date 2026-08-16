@@ -24,27 +24,73 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 .pill-link {  display : inline-flex;  align-items : center;  justify-content : center;  padding : 0.8rem 1.4rem;  background : #ffffff; color : #000000;  border : 3px solid #000000;  border-radius : 999px;  text-decoration : none; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; box-shadow: 4px 4px 0px #000000; transition : transform .15s ease, box-shadow .15s ease; }
 .pill-link:hover {  transform : translate(-2px, -2px);  box-shadow : 6px 6px 0px #000000; }
 
-.catalog-category {  background : #ffffff;  padding : 0;  margin-top: 4rem; margin-bottom : 4rem;  border-radius : 24px; border : 3px solid #000000; box-shadow: 8px 8px 0px #000000; overflow: hidden; }
-.catalog-category .catalog-photo-wrap img {  width : 100%;  height : auto;  max-height : 450px;  object-fit : cover; object-position: center; display : block; border-bottom: 3px solid #000000; }
-.catalog-category .catalog-titlebar {  background: #000000; padding: 1.2rem; text-align : center; }
-.catalog-category .catalog-titlebar h2 {  font-family : 'Cloister Black', serif;  font-size : clamp(2.2rem, 3vw, 3.5rem);  margin : 0; letter-spacing : 0.02em;  color : #ffffff !important; }
-.product-list {  display : flex; flex-direction: column; }
-.product-row {  position : relative;  display : grid;  grid-template-columns : 1fr auto;  align-items : center;  gap : 1rem; padding : 1.2rem 1.5rem;  background : #ffffff;  border-bottom : 2px solid #000000; overflow : visible; }
-.product-row:last-child { border-bottom: none; }
-.product-name {  font-size : 1.1rem;  font-weight : 800;  color : #000000;  margin : 0;  display : inline-block; cursor : pointer; }
-.product-tooltip {  display : none;  position : absolute;  bottom : calc(100% + 0.5rem);  left : 2rem; width : min(300px, 100%);  background : #ffffff;  color : #000000;  border-radius : 18px;  border : 3px solid #000000; box-shadow : 6px 6px 0px #000000;  padding : 1rem;  z-index : 100; }
-.product-row:hover .product-tooltip {  display : block; }
-.product-tooltip img {  width : 100%;  height : auto;  border-radius : 10px;  object-fit : cover;  margin-bottom : 0.85rem; border: 2px solid #000000; }
-.product-tooltip p {  margin : 0;  font-size : 0.95rem;  line-height : 1.5;  color : #000000; font-weight: 500; }
-.btn-price-row {  display : inline-flex;  align-items : center;  justify-content : center;  padding : 0.7rem 1.2rem; border : 3px solid #000000;  background : #ffffff;  color : #000000;  border-radius : 12px;  box-shadow : 3px 3px 0px #000000; text-decoration : none;  text-transform : uppercase;  font-weight : 800;  letter-spacing : 0.04em;  transition : transform .1s ease, box-shadow .1s ease; font-size: 0.85rem; cursor: pointer; font-family: inherit; }
-.btn-price-row:hover {  transform : translate(-1px, -1px);  box-shadow : 4px 4px 0px #000000; background: #fdfbf7; }
-.price-actions {  display : flex;  flex-direction : column;  align-items : flex-end;  gap : 0.5rem; }
-.precio-resultado {  font-size : 0.85rem;  font-weight : 700;  color : #000000;  text-align : right; }
+.catalog-category { background : #ffffff; padding : 0; margin-top: 4rem; margin-bottom : 4rem; border-radius : 24px; border : 3px solid #000000; box-shadow: 8px 8px 0px #000000; overflow: visible; }
+.catalog-photo-wrap { overflow: hidden; border-radius: 20px 20px 0 0; }
+.catalog-category .catalog-photo-wrap img { width : 100%; height : auto; max-height : 450px; object-fit : cover; object-position: center; display : block; border-bottom: 3px solid #000000; }
+.catalog-category .catalog-titlebar { background: #000000; padding: 1.2rem; text-align : center; }
+.catalog-category .catalog-titlebar h2 { font-family : 'Cloister Black', serif; font-size : clamp(2.2rem, 3vw, 3.5rem); margin : 0; letter-spacing : 0.02em; color : #ffffff !important; }
+.product-list { display : flex; flex-direction: column; }
+.product-row { position : relative; display : grid; grid-template-columns : 1fr auto; align-items : center; gap : 1rem; padding : 1.2rem 1.5rem; background : #ffffff; border-bottom : 2px solid #000000; overflow : visible; }
+.product-row:last-child { border-bottom: none; border-radius: 0 0 20px 20px; }
+.product-name { font-size : 1.1rem; font-weight : 800; color : #000000; margin : 0; display : inline-block; cursor : pointer; }
+.product-tooltip { display : none; position : absolute; top: 50%; left: 12rem; transform: translateY(-50%); width : min(300px, 90vw); background : #ffffff; color : #000000; border-radius : 18px; border : 3px solid #000000; box-shadow : 6px 6px 0px #000000; padding : 1rem; z-index : 9999; pointer-events: none; }
+.product-row:hover .product-tooltip { display : block; }
+.product-tooltip img { width : 100%; height : auto; border-radius : 10px; object-fit : cover; margin-bottom : 0.85rem; border: 2px solid #000000; }
+.product-tooltip p { margin : 0; font-size : 0.95rem; line-height : 1.5; color : #000000; font-weight: 500; }
+.btn-price-row { display : inline-flex; align-items : center; justify-content : center; padding : 0.7rem 1.2rem; border : 3px solid #000000; background : #ffffff; color : #000000; border-radius : 12px; box-shadow : 3px 3px 0px #000000; text-decoration : none; text-transform : uppercase; font-weight : 800; letter-spacing : 0.04em; transition : transform .1s ease, box-shadow .1s ease; font-size: 0.85rem; cursor: pointer; font-family: inherit; }
+.btn-price-row:hover { transform : translate(-1px, -1px); box-shadow : 4px 4px 0px #000000; background: #fdfbf7; }
+.price-actions { display : flex; flex-direction : column; align-items : flex-end; gap : 0.5rem; }
+.precio-resultado { font-size : 0.85rem; font-weight : 700; color : #000000; text-align : right; }
 
-@media ( max-width : 900px) {
-.product-row {  grid-template-columns : 1fr; gap: 0.5rem; }
-.btn-price-row {  justify-self : start;  width : fit-content; }
-.catalog-category .catalog-photo-wrap img { height: 200px; }
+@media (max-width: 900px) {
+  /* La fila del producto pasa a ser una sola columna limpia hacia abajo */
+  .product-row { 
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0.8rem !important; 
+    padding: 1rem !important;
+  }
+
+  .product-name {
+    font-size: 1.1rem;
+    text-align: left;
+  }
+
+  /* La imagen/descripción se acomoda prolija en el centro */
+  .product-tooltip {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0.2rem 0 !important;
+    box-sizing: border-box !important;
+    box-shadow: 4px 4px 0px #000000 !important;
+    pointer-events: auto !important;
+  }
+
+  .product-tooltip img {
+    max-height: 180px;
+    object-fit: contain;
+  }
+
+  /* El botón VER PRECIO queda ancho y fácil de tocar con el pulgar */
+  .price-actions {
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .btn-price-row { 
+    width: 100% !important; 
+    justify-content: center !important;
+    box-sizing: border-box !important;
+  }
+
+  .catalog-category .catalog-photo-wrap img { 
+    height: 180px; 
+  }
 }
 </style>
 </head>
@@ -82,18 +128,20 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 
 <div class="quick-links-container">
   <nav class="quick-links" aria-label="Accesos directos a rubros">
-    <!-- Fila 1 (Fuerza 5 botones alineados) -->
-    <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px; width: 100%; max-width: 1000px; overflow: visible;">
+    <!-- Fila 1 (6 botones) -->
+    <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px; width: 100%; max-width: 1200px; overflow: visible;">
       <a href="#pigmentos" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Pigmentos / Tintas</a>
       <a href="#cartuchos" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Cartuchos de Aguja</a>
       <a href="#agujas" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Agujas Tradicionales</a>
       <a href="#punteras" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Punteras y Tips</a>
       <a href="#descartables" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Descartables y Protección</a>
-    </div>
-    <!-- Fila 2 (Fuerza 4 botones alineados) -->
-    <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px; width: 100%; max-width: 1000px; overflow: visible;">
       <a href="#aftercare" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Cuidado y Bioseguridad</a>
-      <a href="#maquinas" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Máquinas y Fuentes</a>
+    </div>
+    <!-- Fila 2 (6 botones) -->
+    <div style="display: flex; flex-wrap: nowrap; justify-content: center; gap: 10px; width: 100%; max-width: 1200px; overflow: visible;">
+      <a href="#Pens%20y%20Fuentes" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Pens y Fuentes</a>
+      <a href="#M%C3%A1quinas%20rotativas%20y%20electromagn%C3%A9ticas" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Máquinas bobinas y rotativas</a>
+      <a href="#Equipamiento%20Profesional" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Equipamiento profesional</a>
       <a href="#componentes" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Componentes y Cables</a>
       <a href="#piercing" class="pill-link" style="white-space: nowrap; font-size: 0.8rem; padding: 0.8rem 1rem;">Piercing y Herramientas</a>
     </div>
@@ -115,8 +163,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Pigmento negro en 1oz y 8oz.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="0" data-producto="Dynamic">VER PRECIO</button>
-<span class="precio-resultado"></span>
+  <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A2:D3" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -126,8 +173,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Negro línea 1oz y 8oz. Triple Black 1oz y 8oz.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="0" data-producto="Inkplay">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A4:D7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -137,32 +183,37 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Pigmentos 1oz y 2oz. Sets de grises, pastel y pieles.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="0" data-producto="Extreme">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A8:D12" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Drakkar</span>
+<span class="product-name">Drakkar tinta negra</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Drakkar.png" alt="Drakkar" loading="lazy">
-<p>Negro 4oz y 8oz. Pigmentos color 1oz. Negro versátil 1oz. Sets de pastel, grises y pieles. Diluyente para color.</p>
+<img src="fotos para productos/Drakkar negro.jpg" alt="Drakkar" loading="lazy">
+<p>Negro 4oz y 8oz. Negro versátil 1oz.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="0" data-producto="Drakkar">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A13:D15" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Drakkar tinta color</span>
+<div class="product-tooltip">
+<img src="fotos para productos/Drakkar tinta color.png" alt="Drakkar" loading="lazy">
+<p>Pigmentos color 1oz. Sets de pastel, grises y pieles.</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A16:D20" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Klug</span>
 <div class="product-tooltip">
-<img src="fotos para productos/klug pigmento.webp" alt="Klug" loading="lazy">
+<img src="fotos para productos/klug pigmento.jpg" alt="Klug" loading="lazy">
 <p>Versátil Black Ink 1oz, 4oz y 8oz. Triple Black 4oz y 8oz.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="0" data-producto="Klug">VER PRECIO</button>
-<span class="precio-resultado"></span>
-</div>
-</div>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0&range=A21:D25" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </section>
 
@@ -179,7 +230,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Series M1, RL, RS y RM en medidas variadas (1201 a 1214+). Caja cerrada x20, unidad suelta o caja surtida.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="327162138" data-producto="Yellow Dragonfly">VER PRECIO</button>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A2:A10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 <span class="precio-resultado"></span>
 </div>
 </div>
@@ -190,8 +241,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>RL 1203, RL 1205-1207, RS 1207-1209, MG/RM 1207-1215. Caja cerrada x20, unidad o caja surtida.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="327162138" data-producto="Spark">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A11:A18" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -201,10 +251,27 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>RL 1203, 1205, 1207 y 1209. Caja cerrada x20.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="327162138" data-producto="Cartuchos EZ">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A19:A26" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
+<div class="product-row">
+<span class="product-name">Drakkar</span>
+<div class="product-tooltip">
+<img src="fotos para productos/cartuchos drakkar.jpg" alt="Drakkar" loading="lazy">
+<p>FALTA INFO.</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A27:D28" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">V-Select</span>
+<div class="product-tooltip">
+<img src="fotos para productos/Cartuchos v-select.jpg" alt="V-Select" loading="lazy">
+<p>FALTA INFO</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A29:D30" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </section>
 
@@ -221,8 +288,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>RL, RS, MG y RM en medidas variadas. Caja cerrada de 50 unidades (10 blísters), blister, unidad o caja surtida.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="973212223" data-producto="Caja Blanca">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=973212223#gid=973212223&range=A2:D13" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -232,8 +298,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>RL 1205-1207-1209. Presentación blister.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="973212223" data-producto="Hurricane">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=973212223#gid=973212223&range=A14:D16" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 </div>
@@ -252,8 +317,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>RL and MG en medidas variadas (1203 a 1218). Caja cerrada x50, blister, unidad o caja surtida.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Tips descartables">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A2:D6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -263,8 +327,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Línea reusable de acero quirúrgico.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Tips de acero">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A7:D7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -274,8 +337,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Unidad suelta, bolsa cerrada x25 o bolsa surtida x25.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Punteras descartables N&amp;N">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A8:D10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -285,19 +347,17 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Unidad suelta o caja x15.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Punteras descartables Inkplay">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A11:D12" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Punteras de acero</span>
 <div class="product-tooltip">
-<img src="fotos para productos/punteras de acero.png" alt="Punteras de acero" loading="lazy">
-<p>Medidas 19mm, 25mm y 32mm. Incluye cepillo para limpieza.</p>
+<img src="fotos para productos/punteras de acero.jpg" alt="Punteras de acero" loading="lazy">
+<p>Medidas 19mm, 25mm y 32mm.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Punteras de acero">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A13:D15" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -307,8 +367,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Convierte máquina de puntera tradicional a sistema de cartuchos.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="2047555527" data-producto="Adaptador de cartuchos">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A16:D16" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 </div>
@@ -327,8 +386,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Negros x50, de color x50, cajas x100 y packs x5.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Campos de protección">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A2:D5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -338,8 +396,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Rollo x300 mts.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Film adherente / protector">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A6:D6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -349,8 +406,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Presentaciones de 1L y 2L.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Descartador de agujas (biohazard)">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A7:D8" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -360,8 +416,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Packs x100 y x20.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Baja lengua de madera">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A9:D10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -371,8 +426,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Caja completa o pack x5 pares.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Guantes de látex">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A11:D13" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -382,8 +436,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Caja completa o pack x5 pares.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Guantes de nitrilo">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A14:D16" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -393,30 +446,27 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Caja o unidad.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Cinta hipoalergénica">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A17:D18" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Cubre clipcord</span>
 <div class="product-tooltip">
-<img src="fotos para productos/cubre clip cord.png" alt="Cubre clipcord" loading="lazy">
+<img src="fotos para productos/cubre clip cord.jpg" alt="Cubre clipcord" loading="lazy">
 <p>Pack x10.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Cubre clipcord">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A19:D19" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Cubre cable / cubre máquina</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Cubre cable cubre máquina.webp" alt="Cubre cable / cubre máquina" loading="lazy">
+<img src="fotos para productos/Cubre cable cubre máquina.png" alt="Cubre cable / cubre máquina" loading="lazy">
 <p>Pack x10.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Cubre cable / cubre máquina">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A20:D20" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -426,8 +476,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Cinta cohesiva para protección de cables y equipos.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Cinta flex autoadherente">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A21:D21" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -437,8 +486,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Unidad, pack x6 o pack x24.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Afeitadoras descartables (Xmart)">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A22:D24" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -448,9 +496,27 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Repairing Film Derm. Presentación de 1/2 metro y 1 metro.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="456869808" data-producto="Film dérmico">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A25:D26" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
+</div>
+<div class="product-row">
+<span class="product-name">Parche dérmico</span>
+<div class="product-tooltip">
+<img src="fotos para productos/parche dérmico.png" alt="Parche dérmico" loading="lazy">
+<p>Medidas 10x12 y 10x25.</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A27:D28" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Parches cicatrizantes</span>
+<div class="product-tooltip">
+<img src="fotos para productos/parches de curación.jpg" alt="Parches cicatrizantes" loading="lazy">
+<p>Euromix 10 x 12 cm y 10 x 25 cm. </p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A29:D30" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 </section>
@@ -464,34 +530,41 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Inkplay</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Inkplay bioseguridad.webp" alt="Inkplay" loading="lazy">
-<p>Línea completa: jabón neutro post-tattoo, crema y crema spray post-tattoo, Tattoo Reviver, solución de higiene, loción piercing, enjuague bucal antibacterial, Stencil Transfer y Stencil Transfer XL, Witch Hazel, Tattoo Cleaner, Foam Pro y Pro Butter.</p>
+<img src="fotos para productos/Inkplay bioseguridad.jpg" alt="Inkplay" loading="lazy">
+<p>Lubricante Pro Butter - Espuma de higiene antibacteriana FoamPro - fijador hectográfico Stencil Transfer - Concentrado ultra líquido Tattoo Cleaner - loción astringente Witch Hazel - Crema Spray Care Post Tattoo.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Inkplay">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=2:11" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Elephant</span>
 <div class="product-tooltip">
-<img src="fotos para productos/elephant products.png" alt="Elephant" loading="lazy">
-<p>Stencil 70cc, Witch Hazel 60cc y 200cc, Cleaner 300cc, Skin Care y Butter.</p>
+<img src="fotos para productos/elephant products.jpg" alt="Elephant" loading="lazy">
+<p>Stencil 70cc y 200ml, Witch Hazel 60cc y 200cc, Cleaner 300cc, Skin Care y Butter.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Elephant">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=12:18" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Cepillo para punteras</span>
+<div class="product-tooltip">
+<img src="fotos para productos/Cepillo para punteras.jpg" alt="Cepillo para punteras" loading="lazy">
+<p>Herramienta de cerdas finas y resistentes diseñada específicamente para la limpieza manual de las punteras y grips de acero reutilizables.</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=19:19" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Vaselina</span>
 <div class="product-tooltip">
-<img src="fotos para productos/vaselina.png" alt="Vaselina" loading="lazy">
+<img src="fotos para productos/vaselina.jpg" alt="Vaselina" loading="lazy">
 <p>Presentaciones de 1kg, mediana y chica.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Vaselina">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=20:22" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -501,41 +574,37 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Presentación x500ml.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Jabón antibacterial Laclorhex">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=23:23" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Parche dérmico</span>
+<span class="product-name">Jabón Clorhexidina Extreme</span>
 <div class="product-tooltip">
-<img src="fotos para productos/parche dérmico.png" alt="Parche dérmico" loading="lazy">
-<p>Medidas 10x12 y 10x25.</p>
+<img src="fotos para productos/Jabón Clorhexidina Extreme.jpg" alt="Jabón Clorhexidina Extreme" loading="lazy">
+<p>Presentación x500ml.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Parche dérmico">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=24:24" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">TKTX</span>
 <div class="product-tooltip">
-<img src="fotos para productos/TKTX.webp" alt="TKTX" loading="lazy">
-<p>Anestésico en formato spray/pocket spray, línea 99,9%.</p>
+<img src="fotos para productos/crema anestesica tktx.jpg" alt="TKTX" loading="lazy">
+<p>Anestésico en crema 99,9%.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="TKTX">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=25:25" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Pain Control</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Pain Control.webp" alt="Pain Control" loading="lazy">
-<p>Gel crema anestésico 30g.</p>
+<img src="fotos para productos/pain control spray anestesico.jpg" alt="Pain Control" loading="lazy">
+<p>Spray anestésico 30ml.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Pain Control">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=26:26" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -545,30 +614,47 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
         <p>Para corrección de pigmentos</p>
     </div>
     <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Antídoto Drakkar">VER PRECIO</button>
-<span class="precio-resultado"></span>
+        <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=27:27" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Papel de transferencia</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Papel de transferencia.webp" alt="Papel de transferencia" loading="lazy">
-<p>Papel hecto, papel para termocopiadora, línea Ministerio U-20 Transfer Tattoo y Spirit Classic Thermal.</p>
+<img src="fotos para productos/Papel hectográfico.webp" alt="Papel hectográfico" loading="lazy">
+<p>Papel hectográfico, línea Magistérico U-20 Transfer Tattoo.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Papel de transferencia">VER PRECIO</button>
-<span class="precio-resultado"></span>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=28:28" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Papel de termocopiadora</span>
+<div class="product-tooltip">
+<img src="fotos para productos/Papel de termocopiadora.jpg" alt="Papel de termocopiadora" loading="lazy">
+<p>Papel Spirit Classic Thermal.</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=29:29" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Tetinas (ink caps)</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Tetinas (ink caps).webp" alt="Tetinas (ink caps)" loading="lazy">
-<p>Chicas y medianas, packs x100 y x1000. Niples x10 unidades.</p>
+<p>Chicas y medianas, packs x100 y x1000.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Tetinas (ink caps)">VER PRECIO</button>
-<span class="precio-resultado"></span>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=30:33" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Nipples</span>
+<div class="product-tooltip">
+<img src="fotos para productos/Nipples.jpg" alt="Nipples (ink caps)" loading="lazy">
+<p>Nipples x10 unidades.</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=34:34" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -578,29 +664,36 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Práctica en tamaño chico y grande.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Piel sintética">VER PRECIO</button>
-<span class="precio-resultado"></span>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=35:36" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Butter Extreme</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Butter extreme.webp" alt="Butter Extreme" loading="lazy">
+<p>Manteca post-tattoo....</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=37:37" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Butter Klug</span>
+<div class="product-tooltip">
+<img src="fotos para productos/Butter tattoo klug.jpg" alt="Butter Extreme" loading="lazy">
 <p>Manteca post-tattoo de la línea Extreme.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="480528025" data-producto="Butter Extreme">VER PRECIO</button>
-<span class="precio-resultado"></span>
-</div>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=38:38" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 </section>
 
-<section class="catalog-category" id="maquinas">
+<section class="catalog-category" id="Pens y Fuentes">
 <div class="catalog-photo-wrap">
-<img src="portadas/portada maquinas y fuentes.png" alt="Portada Máquinas y Fuentes" loading="lazy" onerror="this.src=this.src.replace('.png', '.jpg'); this.onerror=function(){this.src=this.src.replace('.jpg', '.jpeg');}">
+<img src="portadas/pens y fuentes.jpeg" alt="Portada pens y fuentes" loading="lazy" onerror="this.src=this.src.replace('.png', '.jpg'); this.onerror=function(){this.src=this.src.replace('.jpg', '.jpeg');}">
 </div>
-<div class="catalog-titlebar"><h2 style="font-weight: 400 !important;">Máquinas y Fuentes</h2></div>
+<div class="catalog-titlebar"><h2 style="font-weight: 400 !important;">Pens y Fuentes</h2></div>
 <div class="product-list">
 <div class="product-row">
 <span class="product-name">Pen 86 Irons</span>
@@ -609,8 +702,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Máquina tipo Pen.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen 86 Irons">VER PRECIO</button>
-<span class="precio-resultado"></span>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=2:2" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -620,19 +712,17 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Con conexión RCA.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen mini RCA">VER PRECIO</button>
-<span class="precio-resultado"></span>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=3:3" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Pen Spark</span>
+<span class="product-name">Pen Inalámbrica</span>
 <div class="product-tooltip">
-<img src="fotos para productos/PEN SPARK.jpg" alt="Pen Spark" loading="lazy">
+<img src="fotos para productos/Pen inalambrica.jpg" alt="Pen Spark" loading="lazy">
 <p>Máquina inalámbrica.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen Spark">VER PRECIO</button>
-<span class="precio-resultado"></span>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=4:4" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -642,43 +732,125 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Línea Elephant.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen Diablo">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=5:5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Pen Alienhead</span>
 <div class="product-tooltip">
-<img src="fotos para productos/pen alienhead.png" alt="Pen Alienhead" loading="lazy">
+<img src="fotos para productos/" alt="Pen Alienhead" loading="lazy">
 <p>Máquina inalámbrica, fabricación Argentina.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Pen Alienhead">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=6:6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Máquinas de bobina y rotativas</span>
+<span class="product-name">2AM</span>
 <div class="product-tooltip">
-<img src="fotos para productos/maquina de bobina.png" alt="Máquinas de bobina y rotativas" loading="lazy">
-<p>Modelos tradicionales en varios colores.</p>
+<img src="fotos para productos/2a.webp" alt="Fuentes 2AM" loading="lazy">
+<p>2AM 15V común, 2AM 15V con voltímetro, 2AM 15V con chapa.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Máquinas de bobina y rotativas">VER PRECIO</button>
-<span class="precio-resultado"></span>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=7:9" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Fuentes 2AM y 3AM</span>
+<span class="product-name">3AM</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Fuentes 2AM y 3AM.png" alt="Fuentes 2AM y 3AM" loading="lazy">
-<p>2AM 15V común, 2AM 15V con voltímetro, 2AM 15V con chapa y 3AM 15V mini.</p>
+<img src="fotos para productos/Fuente 3AM.png" alt="Fuentes 3AM" loading="lazy">
+<p>3AM 15V mini.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Fuentes 2AM y 3AM">VER PRECIO</button>
-<span class="precio-resultado"></span>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=10:10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
+</section>
+
+<section class="catalog-category" id="Máquinas rotativas y electromagnéticas">
+<div class="catalog-photo-wrap">
+<img src="portadas/portada maquinas.png" alt="Portada Máquinas" loading="lazy" onerror="this.src=this.src.replace('.png', '.jpg'); this.onerror=function(){this.src=this.src.replace('.jpg', '.jpeg');}">
+</div>
+<div class="catalog-titlebar"><h2 style="font-weight: 400 !important;">Máquinas bobinas y rotativas</h2></div>
+<div class="product-list">
+<div class="product-row">
+<span class="product-name">Rotativa Mini Gun liner shader</span>
+<div class="product-tooltip">
+<img src="fotos para productos/máquina rotativa Mini Gun liner shader.jpg" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>DESCRIPCIÓN</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=2:2" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Rotativa Dragonfly</span>
+<div class="product-tooltip">
+<img src="fotos para productos/máquina rotativa Dragonfly.jpg" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>DESCRIPCIÓN</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=3:3" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Bobina standard</span>
+<div class="product-tooltip">
+<img src="fotos para productos/máquina de bobina standard.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>DESCRIPCIÓN</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=4:4" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Bobina 25</span>
+<div class="product-tooltip">
+<img src="fotos para productos/máquina de bobinas y 25.jpg" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>DESCRIPCIÓN</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=5:5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Rotativa Bishop</span>
+<div class="product-tooltip">
+<img src="fotos para productos/máquina rotativa Bishop.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>DESCRIPCIÓN</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=6:6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Bobina Custom 2 Linea</span>
+<div class="product-tooltip">
+<img src="fotos para productos/Maquina Tattoo Bobina Custom 2 Linea.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>DESCRIPCIÓN</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=7:7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Bobina De Tatuaje Liner & Shader</span>
+<div class="product-tooltip">
+<img src="fotos para productos/Máquina De Tatuaje De Metal Bobina De Tatuaje Liner & Shader.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>DESCRIPCIÓN</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=8:8" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+</section>
+
+<section class="catalog-category" id="Equipamiento Profesional">
+<div class="catalog-photo-wrap">
+<img src="portadas/Equipamiento pro.png" alt="Portada equipamiento" loading="lazy" onerror="this.src=this.src.replace('.png', '.jpg'); this.onerror=function(){this.src=this.src.replace('.jpg', '.jpeg');}">
+</div>
+<div class="catalog-titlebar"><h2 style="font-weight: 400 !important;">Equipamiento profesional</h2></div>
+<div class="product-list">
 <div class="product-row">
 <span class="product-name">Termocopiadora</span>
 <div class="product-tooltip">
@@ -686,10 +858,17 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Impresora térmica Bluetooth para diseños y stencil.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1950807330" data-producto="Termocopiadora">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=591757373#gid=591757373&range=2:2" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
+<div class="product-row">
+<span class="product-name">Apoyabrazos</span>
+<div class="product-tooltip">
+<img src="fotos para productos/apoyabrazos.jpg" alt="Apoyabrazos" loading="lazy">
+<p>Soporte para brazos durante el proceso de tatuaje. Modelo chico, premium y cromado</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=591757373#gid=591757373&range=3:5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </section>
 
@@ -702,23 +881,21 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Clip cord</span>
 <div class="product-tooltip">
-<img src="fotos para productos/CLIP CORD SILICONADO.webp" alt="Clip cord" loading="lazy">
+<img src="fotos para productos/CLIP CORD.jpg" alt="Clip cord" loading="lazy">
 <p>Económico, siliconado, reforzado y DC para máquina Pen.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1014710718" data-producto="Clip cord">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1014710718#gid=1014710718&range=2:5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Pedal</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Pedal.jpg" alt="Pedal" loading="lazy">
+<img src="fotos para productos/Pedales.jpg" alt="Pedal" loading="lazy">
 <p>Económico, cuadrado, redondo y reforzado.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1014710718" data-producto="Pedal">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1014710718#gid=1014710718&range=6:9" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -728,9 +905,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Común y reforzado.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="1014710718" data-producto="Cable RCA">VER PRECIO</button>
-<span class="precio-resultado"></span>
-</div>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1014710718#gid=1014710718&range=10:11" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 </section>
@@ -748,8 +923,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Medidas 16g, 18g y 20g. Unidad o caja.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="916622949" data-producto="Catéteres">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=916622949#gid=916622949&range=2:6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -759,8 +933,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Acero quirúrgico para piercing.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="916622949" data-producto="Pinza oval abierta">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=916622949#gid=916622949&range=7:7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -770,8 +943,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Acero quirúrgico para piercing.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="916622949" data-producto="Pinza triangular abierta">VER PRECIO</button>
-<span class="precio-resultado"></span>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=916622949#gid=916622949&range=8:8" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -781,7 +953,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Acero quirúrgico para piercing.</p>
 </div>
 <div class="price-actions">
-<button class="btn-price-row ver-precio" data-gid="916622949" data-producto="Pinza mosquito">VER PRECIO</button>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=916622949#gid=916622949&range=9:9" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 <span class="precio-resultado"></span>
 </div>
 </div>
@@ -850,9 +1022,11 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
   <div style="max-width: 1100px; margin: 0 auto; padding: 0 1rem; text-align: center;">
     <p style="margin: 0; color: #666666; font-size: 0.75rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em; text-transform: uppercase;">
       Diseño Estratégico y Desarrollo Web por 
-      <a href="#" target="_blank" rel="noopener" style="color: #999999; text-decoration: none; font-weight: 700; transition: color 0.2s ease; letter-spacing: 0.1em;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#999999'">
-        BORDE
+      <a href="https://cgarofalo.my.canva.site/portfolio/diva" target="_blank" rel="noopener" style="color: #999999; text-decoration: none; font-weight: 700; transition: color 0.2s ease; letter-spacing: 0.1em;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#999999'">
+        &lt;div&gt;a
       </a>
     </p>
   </div>
 </div>
+
+//

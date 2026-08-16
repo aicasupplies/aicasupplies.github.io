@@ -6,41 +6,9 @@
 <title>Aica Supplies | Insumos Profesionales para Tatuadores</title>
 <meta name="description" content="Aica Supplies - Insumos premium para tatuadores profesionales. Pigmentos, agujas, cartuchos, máquinas y bioseguridad. Sucursales en Quilmes y Lomas de Zamora.">
 
-<!--
-  ============================================================
-  CONFIGURACIÓN RÁPIDA (editar acá los datos que cambian seguido)
-  ============================================================
-  1. LISTA DE PRECIOS: buscar "PRICE_LIST_URL" en este archivo
-     y reemplazar el href="#" por el link real (Google Sheets/Drive/PDF).
-  2. WHATSAPP:
-       - Quilmes:          54 9 11 3812-7898  -> https://wa.me/5491138127898
-       - Lomas de Zamora:  54 9 11 3779-3710  -> https://wa.me/5491137793710
-     Buscar "wa.me" para encontrar todos los botones de WhatsApp.
-  3. FOTOS DE PRODUCTOS: buscar "assets/images/categoria-" y reemplazar
-     cada archivo dentro de /assets/images/ manteniendo el mismo nombre,
-     o cambiar el atributo src si usás otro nombre de archivo.
-  4. INSTAGRAM: buscar "instagram.com/aicasupplies" en el footer.
-  5. WHATSAPP DEL HERO: el botón "Consultar por WhatsApp" del Hero abre un
-     menú con las dos sucursales (ver BRANCHES en assets/js/script.js) en
-     vez de asumir un solo número. Para agregar/editar sucursales, tocar
-     ese objeto de configuración.
-  6. VER MODELOS: cada botón "Ver Modelos" de las categorías apunta a
-     catalogo.html#<seccion> (ej. catalogo.html#pigmentos). El detalle de
-     marcas y el botón "Ver Precio" se editan directamente en catalogo.html.
-     
-  ============================================================
--->
-
-<!-- Google Fonts: Inter (sans-serif limpia). UnifrakturMaguntia queda como
-     fallback por si el CDN de Cloister Black no carga. -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- 'Cloister Black' no está disponible en Google Fonts: se carga vía cdnfonts.com
-     (fuente shareware). Si vas a lanzar el sitio comercialmente, verificar la
-     licencia de "Cloister Black" antes de producción; UnifrakturMaguntia
-     (licencia libre, ya cargada arriba) queda como alternativa 100% segura. -->
 <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/cloister-black">
 
 <link rel="icon" type="image/png" href="assets/images/logo.png">
@@ -85,31 +53,27 @@
       <div class="hero-copy">
         <p class="eyebrow">Insumos Profesionales de Tatuaje</p>
         <h1 class="hero-title" style="font-weight: 400 !important;">Aica Supplies</h1>
-        <p class="hero-tagline">El estudio confía en la tinta correcta.</p>
+        <p class="hero-tagline">Todo lo que necesitás en el mundo del tatuaje.</p>
         <p class="hero-desc">
           Pigmentos, agujas, cartuchos, máquinas y bioseguridad de las mejores marcas del
           mercado. Todo lo que un tatuador profesional necesita, en un mismo lugar.
         </p>
         <div class="hero-cta">
-          <!-- Botón de WhatsApp con selector de sucursal: la lógica vive en
-               assets/js/script.js (objeto BRANCHES), no hardcodea Quilmes. -->
           <div class="whatsapp-cta" id="whatsapp-cta">
             <button type="button" class="btn btn-primary" id="whatsapp-hero-btn" aria-haspopup="true" aria-expanded="false">
               Consultar por WhatsApp
             </button>
             <div class="whatsapp-options" id="whatsapp-options" hidden>
-              <!-- Generadas dinámicamente por script.js a partir de BRANCHES -->
             </div>
           </div>
 
           <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0" target="_blank" rel="noopener" class="btn btn-outline">
-    Ver Lista de Precios
+            Ver Lista de Precios
           </a>
         </div>
       </div>
 
       <div class="hero-visual">
-        <!-- Logo / imagen principal del hero (versión con fondo transparente) -->
         <img src="assets/images/logo-transparent.png" alt="Aica Supplies - Máquina de tatuar y ojo old school" class="hero-img">
       </div>
     </div>
@@ -129,7 +93,6 @@
         <!-- 1. Pigmentos / Tintas -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de pigmentos/tintas -->
             <img src="portadas/portada pigmentos y tintas para tatuaje.jpg" alt="Pigmentos / Tintas" loading="lazy">
           </div>
           <div class="category-body">
@@ -142,12 +105,11 @@
         <!-- 2. Cartuchos de Aguja -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de cartuchos -->
             <img src="portadas/portada cartuchos de aguja para tatuaje.png" alt="Cartuchos de Aguja" loading="lazy">
           </div>
           <div class="category-body">
             <h3>Cartuchos de Aguja</h3>
-            <p>Líneas premium Spark, Yellow Dragonfly y Cartuchos EZ.</p>
+            <p>Líneas premium Spark, Yellow Dragonfly, Drakkar, V-Select y Cartuchos EZ.</p>
             <a href="catalogo.html#cartuchos" class="btn btn-mini">Ver Modelos</a>
           </div>
         </article>
@@ -155,7 +117,6 @@
         <!-- 3. Agujas Tradicionales -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de agujas tradicionales -->
             <img src="portadas/portada agujas tradicionales.jpg" alt="Agujas tradicionales RL, RS, MG y RM" loading="lazy">
           </div>
           <div class="category-body">
@@ -168,7 +129,6 @@
         <!-- 4. Punteras y Tips -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de punteras y tips -->
             <img src="portadas/portada punteras y tips.png" alt="Punteras y Tips" loading="lazy">
           </div>
           <div class="category-body">
@@ -181,7 +141,6 @@
         <!-- 5. Insumos Descartables y Protección -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de descartables y protección -->
             <img src="portadas/portada descartables y protección.png" alt="Insumos descartables y de protección" loading="lazy">
           </div>
           <div class="category-body">
@@ -194,7 +153,6 @@
         <!-- 6. Cuidado y Bioseguridad (Aftercare) -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de aftercare -->
             <img src="portadas/portada cuidado y bioseguridad.png" alt="Cuidado y Bioseguridad" loading="lazy">
           </div>
           <div class="category-body">
@@ -204,23 +162,45 @@
           </div>
         </article>
 
-        <!-- 7. Máquinas y Fuentes -->
+        <!-- 7. Pens y Fuentes -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de máquinas y fuentes -->
-            <img src="portadas/portada maquinas y fuentes.png" alt="Portada Máquinas y Fuentes" loading="lazy" onerror="this.src=this.src.replace('.png', '.jpg'); this.onerror=function(){this.src=this.src.replace('.jpg', '.jpeg');}">
+            <img src="portadas/pens y fuentes.jpeg" alt="Pens y Fuentes" loading="lazy" onerror="this.src=this.src.replace('.png', '.jpg'); this.onerror=function(){this.src=this.src.replace('.jpg', '.jpeg');}">
           </div>
           <div class="category-body">
-            <h3>Máquinas y Fuentes</h3>
-            <p>Rotativas y tipo PEN (86 Irons, Spark inalámbrica, Diablo, Alienhead). Fuentes 2AM y 3AM con voltímetro y chapa.</p>
-            <a href="catalogo.html#maquinas" class="btn btn-mini">Ver Modelos</a>
+            <h3>Pens y Fuentes</h3>
+            <p>Pens 86 Irons, Mini RCA, Inalámbrica, Diablo y Alienhead. Fuentes 2AM y 3AM.</p>
+            <a href="catalogo.html#Pens%20y%20Fuentes" class="btn btn-mini">Ver Modelos</a>
           </div>
         </article>
 
-        <!-- 8. Componentes y Cables -->
+        <!-- 8. Máquinas bobinas y rotativas -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de componentes y cables -->
+            <img src="portadas/portada maquinas.png" alt="Máquinas bobinas y rotativas" loading="lazy" onerror="this.src=this.src.replace('.png', '.jpg'); this.onerror=function(){this.src=this.src.replace('.jpg', '.jpeg');}">
+          </div>
+          <div class="category-body">
+            <h3>Máquinas bobinas y rotativas</h3>
+            <p>Rotativas Mini Gun, Dragonfly, Bishop y máquinas de bobina standard, 25 y custom.</p>
+            <a href="catalogo.html#M%C3%A1quinas%20rotativas%20y%20electromagn%C3%A9ticas" class="btn btn-mini">Ver Modelos</a>
+          </div>
+        </article>
+
+        <!-- 9. Equipamiento Profesional -->
+        <article class="category-card">
+          <div class="category-img-wrap">
+            <img src="portadas/Equipamiento pro.png" alt="Equipamiento profesional" loading="lazy" onerror="this.src=this.src.replace('.png', '.jpg'); this.onerror=function(){this.src=this.src.replace('.jpg', '.jpeg');}">
+          </div>
+          <div class="category-body">
+            <h3>Equipamiento profesional</h3>
+            <p>Termocopiadoras Bluetooth e impresoras térmicas para stencil, apoyabrazos chica, premium y cromados.</p>
+            <a href="catalogo.html#Equipamiento%20Profesional" class="btn btn-mini">Ver Modelos</a>
+          </div>
+        </article>
+
+        <!-- 10. Componentes y Cables -->
+        <article class="category-card">
+          <div class="category-img-wrap">
             <img src="portadas/portada componentes y cables.png" alt="Componentes y Cables" loading="lazy">
           </div>
           <div class="category-body">
@@ -230,10 +210,9 @@
           </div>
         </article>
 
-        <!-- 9. Piercing y Herramientas -->
+        <!-- 11. Piercing y Herramientas -->
         <article class="category-card">
           <div class="category-img-wrap">
-            <!-- Reemplazar por foto real de piercing y herramientas -->
             <img src="portadas/portada piercings y herramientas.png" alt="Piercing y Herramientas" loading="lazy">
           </div>
           <div class="category-body">
@@ -260,10 +239,9 @@
         entrá y consultá el valor exacto de cada insumo, hoy.
       </p>
 
-      <!-- PRICE_LIST_URL: reemplazar el href="#" por el link real (Google Sheets / Drive / PDF) -->
       <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=0#gid=0" target="_blank" rel="noopener" class="btn btn-primary">
-    VER LISTA DE PRECIOS COMPLETA (ACTUALIZADA)
-</a>
+        VER LISTA DE PRECIOS COMPLETA (ACTUALIZADA)
+      </a>
     </div>
   </section>
 
@@ -282,11 +260,9 @@
           <h3>Sucursal Quilmes</h3>
           <p class="branch-address">Rivadavia 112 - Local 23 - Galería Alesgaray</p>
           <div class="branch-actions">
-            <!-- Google Maps: Rivadavia 112, Local 23, Galería Alesgaray (Quilmes Centro) -->
             <a href="https://www.google.com/maps/search/?api=1&query=Rivadavia%20112%20Local%2023%20Galer%C3%ADa%20Alesgaray%20Quilmes%20Centro" target="_blank" rel="noopener" class="btn btn-outline btn-small">
               Cómo Llegar
             </a>
-            <!-- WhatsApp Quilmes: 1138127898 -->
             <a href="https://wa.me/5491138127898?text=Hola%20Aica%20Supplies%20Quilmes!" target="_blank" rel="noopener" class="btn btn-primary btn-small">
               WhatsApp
             </a>
@@ -298,22 +274,20 @@
           <h3>Sucursal Lomas de Zamora</h3>
           <p class="branch-address">Boedo 236 - Local 48 - Galería Nazmi</p>
           <div class="branch-actions">
-            <!-- Google Maps: Boedo 236, Local 48, Galería Nazmi (Lomas de Zamora) -->
             <a href="https://maps.app.goo.gl/P2ebW9qNexpSqpi97" target="_blank" rel="noopener" class="btn btn-outline btn-small">
               Cómo Llegar
             </a>
-            <!-- WhatsApp Lomas de Zamora: 1137793710 -->
             <a href="https://wa.me/5491137793710?text=Hola%20Aica%20Supplies%20Lomas%20de%20Zamora!" target="_blank" rel="noopener" class="btn btn-primary btn-small">
               WhatsApp
             </a>
           </div>
         </article>
 
-
       </div>
+    </div>
   </section>
 
-    <section class="branches" id="Nosotros" style="padding: 30px 0 !important;">
+  <section class="branches" id="Nosotros" style="padding: 30px 0 !important;">
     <div class="container">
       <div class="nosotros-card" style="border:4px solid #000; box-shadow:0 10px 20px rgba(0,0,0,0.2); padding:1.5rem; background:#fff;">
         <p class="section-eyebrow">SOBRE AICA SUPPLIES</p>
@@ -323,7 +297,7 @@
         </p>
       </div>
     </div>
-</section>
+  </section>
 
 </main>
 
@@ -341,29 +315,26 @@
 
     <div class="footer-social">
       <p class="footer-heading">Seguinos</p>
-      <!-- Instagram oficial -->
       <a href="https://www.instagram.com/aicasupplies?utm_source=qr&igsh=cWpqajdxNmFzdTR1" target="_blank" rel="noopener" class="footer-instagram" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
-    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 20px; height: 20px;">
-    @aicasupplies
-</a>
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" style="width: 20px; height: 20px;">
+        @aicasupplies
+      </a>
     </div>
 
     <div class="footer-contact">
-    <p class="footer-heading">Contacto</p>
-    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <p class="footer-heading">Contacto</p>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
         <a href="https://wa.me/5491138127898" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" style="width: 20px; height: 20px;">
-            WhatsApp Quilmes
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" style="width: 20px; height: 20px;">
+          WhatsApp Quilmes
         </a>
         <a href="https://wa.me/5491137793710" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: inherit;">
-            <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" style="width: 20px; height: 20px;">
-            WhatsApp Lomas de Zamora
+          <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp" style="width: 20px; height: 20px;">
+          WhatsApp Lomas de Zamora
         </a>
+      </div>
     </div>
-</div>
 
-  <div class="footer-bottom">
-    
   </div>
 </footer>
 
@@ -377,8 +348,8 @@
   <div style="max-width: 1100px; margin: 0 auto; padding: 0 1rem; text-align: center;">
     <p style="margin: 0; color: #666666; font-size: 0.75rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em; text-transform: uppercase;">
       Diseño Estratégico y Desarrollo Web por 
-      <a href="#" target="_blank" rel="noopener" style="color: #999999; text-decoration: none; font-weight: 700; transition: color 0.2s ease; letter-spacing: 0.1em;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#999999'">
-        BORDE
+      <a href="https://cgarofalo.my.canva.site/portfolio/diva" target="_blank" rel="noopener" style="color: #999999; text-decoration: none; font-weight: 700; transition: color 0.2s ease; letter-spacing: 0.1em;" onmouseover="this.style.color='#ffffff'" onmouseout="this.style.color='#999999'">
+        &lt;div&gt;a
       </a>
     </p>
   </div>
