@@ -106,17 +106,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Botones VER PRECIO: forzar pestaña nueva por click (algunos navegadores mobile
-  //     reutilizan una pestaña de docs.google.com ya abierta en vez de navegar a la
-  //     sección pedida si todos comparten target="_blank") ---
-  document.querySelectorAll('a.btn-price-row[target="_blank"]').forEach((link) => {
-    link.addEventListener('click', (event) => {
-      event.preventDefault();
-      const uniqueTarget = `sheet_${Date.now()}_${Math.random().toString(36).slice(2)}`;
-      window.open(link.href, uniqueTarget, 'noopener');
-    });
-  });
-
   // --- Año dinámico en el footer ---
   const yearEl = document.getElementById('year');
   if (yearEl) {
