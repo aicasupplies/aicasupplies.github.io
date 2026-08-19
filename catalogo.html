@@ -34,7 +34,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 .product-row:last-child { border-bottom: none; border-radius: 0 0 20px 20px; }
 .product-name { font-size : 1.1rem; font-weight : 800; color : #000000; margin : 0; display : inline-block; cursor : pointer; }
 .product-tooltip { display : none; position : absolute; top: 50%; left: 12rem; transform: translateY(-50%); width : min(300px, 90vw); background : #ffffff; color : #000000; border-radius : 18px; border : 3px solid #000000; box-shadow : 6px 6px 0px #000000; padding : 1rem; z-index : 9999; pointer-events: none; }
-.product-row:hover .product-tooltip { display : block; }
+@media (hover: hover) and (pointer: fine) {
+  .product-row:hover .product-tooltip { display : block; }
+}
+.product-row.is-open .product-tooltip { display : block; }
 .product-tooltip img { width : 100%; height : auto; border-radius : 10px; object-fit : cover; margin-bottom : 0.85rem; border: 2px solid #000000; }
 .product-tooltip p { margin : 0; font-size : 0.95rem; line-height : 1.5; color : #000000; font-weight: 500; }
 .btn-price-row { display : inline-flex; align-items : center; justify-content : center; padding : 0.7rem 1.2rem; border : 3px solid #000000; background : #ffffff; color : #000000; border-radius : 12px; box-shadow : 3px 3px 0px #000000; text-decoration : none; text-transform : uppercase; font-weight : 800; letter-spacing : 0.04em; transition : transform .1s ease, box-shadow .1s ease; font-size: 0.85rem; cursor: pointer; font-family: inherit; }
@@ -55,6 +58,8 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
   .product-name {
     font-size: 1.1rem;
     text-align: left;
+    display: block;
+    padding: 0.4rem 0;
   }
 
   /* La imagen/descripción se acomoda prolija en el centro */
@@ -258,20 +263,20 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <span class="product-name">Drakkar</span>
 <div class="product-tooltip">
 <img src="fotos para productos/cartuchos drakkar.jpg" alt="Drakkar" loading="lazy">
-<p>FALTA INFO.</p>
+<p>Cartuchos del 1 al 14 RL. Del 1 al 14 RS. 7MG al 15MG. 7 al 15RM. </p>
 </div>
 <div class="price-actions">
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A27:D28" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=27:30" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">V-Select</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Cartuchos v-select.jpg" alt="V-Select" loading="lazy">
-<p>FALTA INFO</p>
+<p>Cartuchos del 3 al 11 RL. Del 7 al 11 RS. 7mg al 15mg. 7 al 15RM.</p>
 </div>
 <div class="price-actions">
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=A29:D30" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=327162138#gid=327162138&range=31:34" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </section>
 
@@ -324,7 +329,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <span class="product-name">Tips de acero</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Tips de acero.webp" alt="Tips de acero" loading="lazy">
-<p>Línea reusable de acero quirúrgico.</p>
+<p>Línea reusable de acero quirúrgico. Del 3 al 11 RL. 7mg al 15mg.</p>
 </div>
 <div class="price-actions">
 <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A7:D7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
@@ -334,7 +339,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <span class="product-name">Punteras descartables N&N</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Punteras descartables N&N.png" alt="Punteras descartables N&N" loading="lazy">
-<p>Unidad suelta, bolsa cerrada x25 o bolsa surtida x25.</p>
+<p>Unidad suelta, bolsa cerrada x25 o bolsa surtida x25. Del 7 al 11RL. Del 7 al 15 MG. </p>
 </div>
 <div class="price-actions">
 <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A8:D10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
@@ -344,7 +349,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <span class="product-name">Punteras descartables Inkplay</span>
 <div class="product-tooltip">
 <img src="fotos para productos/punteras descartables inkplay.png" alt="Punteras descartables Inkplay" loading="lazy">
-<p>Unidad suelta o caja x15.</p>
+<p>Unidad suelta o caja x15. Del 3 al 14 RL. Del 7 al 15 MG.</p>
 </div>
 <div class="price-actions">
 <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=2047555527#gid=2047555527&range=A11:D12" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
@@ -452,7 +457,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Cubre clipcord</span>
 <div class="product-tooltip">
-<img src="fotos para productos/cubre clip cord.jpg" alt="Cubre clipcord" loading="lazy">
+<img src="fotos para productos/cubre clipcord.png" alt="Cubre clipcord" loading="lazy">
 <p>Pack x10.</p>
 </div>
 <div class="price-actions">
@@ -462,7 +467,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Cubre cable / cubre máquina</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Cubre cable cubre máquina.png" alt="Cubre cable / cubre máquina" loading="lazy">
+<img src="fotos para productos/cable cubre máquina.jpg" alt="cable cubre máquina" loading="lazy">
 <p>Pack x10.</p>
 </div>
 <div class="price-actions">
@@ -480,7 +485,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Afeitadoras descartables (Xmart)</span>
+<span class="product-name">Afeitadoras descartables</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Afeitadoras descartables (Xmart).webp" alt="Afeitadoras descartables (Xmart)" loading="lazy">
 <p>Unidad, pack x6 o pack x24.</p>
@@ -503,10 +508,10 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <span class="product-name">Parche dérmico</span>
 <div class="product-tooltip">
 <img src="fotos para productos/parche dérmico.png" alt="Parche dérmico" loading="lazy">
-<p>Medidas 10x12 y 10x25.</p>
+<p>Medidas 10x12 y 10x25. Rollo completo. </p>
 </div>
 <div class="price-actions">
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A27:D28" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A27:D29" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -516,7 +521,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Euromix 10 x 12 cm y 10 x 25 cm. </p>
 </div>
 <div class="price-actions">
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A29:D30" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=456869808#gid=456869808&range=A30:D31" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 </section>
@@ -540,7 +545,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Elephant</span>
 <div class="product-tooltip">
-<img src="fotos para productos/elephant products.jpg" alt="Elephant" loading="lazy">
+<img src="fotos para productos/elephant products.png" alt="Elephant" loading="lazy">
 <p>Stencil 70cc y 200ml, Witch Hazel 60cc y 200cc, Cleaner 300cc, Skin Care y Butter.</p>
 </div>
 <div class="price-actions">
@@ -560,7 +565,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Vaselina</span>
 <div class="product-tooltip">
-<img src="fotos para productos/vaselina.jpg" alt="Vaselina" loading="lazy">
+<img src="fotos para productos/vaselina.png" alt="Vaselina" loading="lazy">
 <p>Presentaciones de 1kg, mediana y chica.</p>
 </div>
 <div class="price-actions">
@@ -580,7 +585,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Jabón Clorhexidina Extreme</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Jabón Clorhexidina Extreme.jpg" alt="Jabón Clorhexidina Extreme" loading="lazy">
+<img src="fotos para productos/jabón clorhexidina extreme.jpg" alt="Jabón Clorhexidina Extreme" loading="lazy">
 <p>Presentación x500ml.</p>
 </div>
 <div class="price-actions">
@@ -588,13 +593,13 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">TKTX</span>
+<span class="product-name">Crema anestésica</span>
 <div class="product-tooltip">
-<img src="fotos para productos/crema anestesica tktx.jpg" alt="TKTX" loading="lazy">
-<p>Anestésico en crema 99,9%.</p>
+<img src="fotos para productos/crema anestesica.png" alt="Crema anestésica" loading="lazy">
+<p>Anestésico en crema TKTX 99,9% y gel crema Stop Pain x 30g.</p>
 </div>
 <div class="price-actions">
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=25:25" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=25:26" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -604,57 +609,67 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Spray anestésico 30ml.</p>
 </div>
 <div class="price-actions">
-<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=26:26" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=27:27" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Antídoto Drakkar</span>
+<span class="product-name">Antídoto Elephant</span>
     <div class="product-tooltip">
-        <img src="fotos para productos/antídoto drakkar.png" alt="Antídoto Drakkar" loading="lazy">
-        <p>Para corrección de pigmentos</p>
+        <img src="fotos para productos/antídoto elephant.jpeg" alt="Antídoto Elephant" loading="lazy">
+        <p>Borrador de stencil para tatuajes Elephant (ANTÍDOTO 200ml): el producto exclusivo para remover stencils mal colocados.</p>
     </div>
     <div class="price-actions">
-        <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=27:27" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+        <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=28:28" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Drakkar borrador de hectográfico</span>
+    <div class="product-tooltip">
+        <img src="fotos para productos/borrador hectográfico.jpeg" alt="Borrador hectográfico" loading="lazy">
+        <p>Línea Drakkar. Precisión y lienzo limpio en segundos: el aliado indispensable para corregir tus stencils sin irritar la piel.</p>
+    </div>
+    <div class="price-actions">
+        <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=29:29" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Papel de transferencia</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Papel hectográfico.webp" alt="Papel hectográfico" loading="lazy">
-<p>Papel hectográfico, línea Magistérico U-20 Transfer Tattoo.</p>
+<img src="fotos para productos/papel hectográfico.webp" alt="Papel hectográfico" loading="lazy">
+<p>Papel hectográfico, línea Magisterio U-20 Transfer Tattoo. Resma por 100u o la unidad. </p>
 </div>
 <div class="price-actions">
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=28:28" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=30:31" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Papel de termocopiadora</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Papel de termocopiadora.jpg" alt="Papel de termocopiadora" loading="lazy">
-<p>Papel Spirit Classic Thermal.</p>
+<img src="fotos para productos/papel de termocopiadora.jpg" alt="Papel de termocopiadora" loading="lazy">
+<p>Papel Spirit Classic Thermal. Resma por 100u o la unidad.</p>
 </div>
 <div class="price-actions">
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=29:29" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=32:32" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Tetinas (ink caps)</span>
+<span class="product-name">Tetinas (caps)</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Tetinas (ink caps).webp" alt="Tetinas (ink caps)" loading="lazy">
-<p>Chicas y medianas, packs x100 y x1000.</p>
+<p>Chicas, medianas y grandes. Packs x100 y x1000.</p>
 </div>
 <div class="price-actions">
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=30:33" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=33:36" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Nipples</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Nipples.jpg" alt="Nipples (ink caps)" loading="lazy">
+<img src="fotos para productos/nipples.jpg" alt="Nipples (ink caps)" loading="lazy">
 <p>Nipples x10 unidades.</p>
 </div>
 <div class="price-actions">
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=34:34" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=37:37" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
@@ -664,27 +679,27 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <p>Práctica en tamaño chico y grande.</p>
 </div>
 <div class="price-actions">
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=35:36" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=38:39" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Butter Extreme</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Butter extreme.webp" alt="Butter Extreme" loading="lazy">
-<p>Manteca post-tattoo....</p>
+<img src="fotos para productos/butter extreme.jpg" alt="Butter Extreme" loading="lazy">
+<p>Bálsamo o manteca para tatuajes 200gr.</p>
 </div>
 <div class="price-actions">
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=37:37" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=40:40" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
 <span class="product-name">Butter Klug</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Butter tattoo klug.jpg" alt="Butter Extreme" loading="lazy">
-<p>Manteca post-tattoo de la línea Extreme.</p>
+<img src="fotos para productos/Butter tattoo klug.jpg" alt="Butter Klug" loading="lazy">
+<p>Bálsamo o manteca para tatuajes de la línea Klug.</p>
 </div>
 <div class="price-actions">
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=38:38" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=480528025#gid=480528025&range=41:41" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 </section>
@@ -718,8 +733,8 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Pen Inalámbrica</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Pen inalambrica.jpg" alt="Pen Spark" loading="lazy">
-<p>Máquina inalámbrica.</p>
+<img src="fotos para productos/pen inalambrica.jpg" alt="Pen Spark" loading="lazy">
+<p>Máquina inalámbrica 5V - 12V. Incluye batería con pantalla LED. </p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=4:4" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
@@ -729,7 +744,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <span class="product-name">Pen Diablo</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Pen diablo.png" alt="Pen Diablo" loading="lazy">
-<p>Línea Elephant.</p>
+<p>Stroke 3.5mm. Visor a color programable, incluye 2 baterías y cable USB.</p>
 </div>
 <div class="price-actions">
 <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=5:5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
@@ -738,7 +753,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Pen Alienhead</span>
 <div class="product-tooltip">
-<img src="fotos para productos/" alt="Pen Alienhead" loading="lazy">
+<img src="fotos para productos/pen alienhead.png" alt="Pen Alienhead" loading="lazy">
 <p>Máquina inalámbrica, fabricación Argentina.</p>
 </div>
 <div class="price-actions">
@@ -746,20 +761,40 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">2AM</span>
+<span class="product-name">Fuente inalámbrica</span>
 <div class="product-tooltip">
-<img src="fotos para productos/2a.webp" alt="Fuentes 2AM" loading="lazy">
-<p>2AM 15V común, 2AM 15V con voltímetro, 2AM 15V con chapa.</p>
+<img src="fotos para productos/2am.jpg" alt="Fuentes 2AM" loading="lazy">
+<p>Voltaje de salida 12.V. Peso 90gr con pantalla digital, incluye cable. Conexión RCA.</p>
 </div>
 <div class="price-actions">
-    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=7:9" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=7:7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">3AM</span>
+<span class="product-name">Fuente común</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Fuente 3AM.png" alt="Fuentes 3AM" loading="lazy">
-<p>3AM 15V mini.</p>
+<img src="fotos para productos/fuente comun.webp" alt="fuente comun" loading="lazy">
+<p>2AM. Voltaje de salida 12 V.</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=8:8" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Fuente chapa</span>
+<div class="product-tooltip">
+<img src="fotos para productos/fuente chapa.webp" alt="fuente chapa" loading="lazy">
+<p>Voltaje de salida: 13,8 V. 2AM. Peso: 320g. Con pantalla digital.</p>
+</div>
+<div class="price-actions">
+    <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=9:9" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Fuente digital</span>
+<div class="product-tooltip">
+<img src="fotos para productos/fuente digital.webp" alt="fuente digital" loading="lazy">
+<p>Voltaje de salida: 220 V. 2AM. Peso: 320g. Con pantalla LED.</p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1950807330#gid=1950807330&range=10:10" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
@@ -774,70 +809,70 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="catalog-titlebar"><h2 style="font-weight: 400 !important;">Máquinas bobinas y rotativas</h2></div>
 <div class="product-list">
 <div class="product-row">
-<span class="product-name">Rotativa Mini Gun liner shader</span>
+<span class="product-name">Modelo 1</span>
 <div class="product-tooltip">
 <img src="fotos para productos/máquina rotativa Mini Gun liner shader.jpg" alt="Máquinas de bobina y rotativas" loading="lazy">
-<p>DESCRIPCIÓN</p>
+<p>Rotativa en color azul metalizado, con sistema de doble conexión (RCA y Clip Cord), baja vibración y alto rendimiento tanto para líneas como para sombras y relleno.</p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=2:2" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Rotativa Dragonfly</span>
+<span class="product-name">Modelo 2</span>
 <div class="product-tooltip">
 <img src="fotos para productos/máquina rotativa Dragonfly.jpg" alt="Máquinas de bobina y rotativas" loading="lazy">
-<p>DESCRIPCIÓN</p>
+<p>Rotativa tipo Dragonfly en color negro, con doble conexión (RCA y Clip Cord), trabaja a una frecuencia de hasta 10000rpm.</p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=3:3" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Bobina standard</span>
+<span class="product-name">Modelo 3</span>
 <div class="product-tooltip">
-<img src="fotos para productos/máquina de bobina standard.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
-<p>DESCRIPCIÓN</p>
+<img src="fotos para productos/máquina de bobina standard.png" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>Bobinas híbrida (10-12 wraps) con chasis de hierro labrado envejecido, conexión Clip Cord y operación de 6V a 9V, ideal para lograr trazos sólidos, sombras y pigmentación rápida con baja vibración.</p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=4:4" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Bobina 25</span>
+<span class="product-name">Modelo 4</span>
 <div class="product-tooltip">
 <img src="fotos para productos/máquina de bobinas y 25.jpg" alt="Máquinas de bobina y rotativas" loading="lazy">
-<p>DESCRIPCIÓN</p>
+<p>Bobinas. Diseñada para un rendimiento constante tanto en delineado como en sombras y relleno.</p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=5:5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Rotativa Bishop</span>
+<span class="product-name">Modelo 5</span>
 <div class="product-tooltip">
-<img src="fotos para productos/máquina rotativa Bishop.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
-<p>DESCRIPCIÓN</p>
+<img src="fotos para productos/Máquina rotativa bishop.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>Rotativa compacta en color púrpura, diseñada para una mayor precisión, suavidad y comodidad durante sesiones prolongadas.</p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=6:6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Bobina Custom 2 Linea</span>
+<span class="product-name">Modelo 6</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Maquina Tattoo Bobina Custom 2 Linea.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
-<p>DESCRIPCIÓN</p>
+<img src="fotos para productos/Maquina Tattoo Bobina Custom 2 Linea.png" alt="Máquinas de bobina y rotativas" loading="lazy">
+<p>Bobinas Custom en tono azul metálico, ensamblada con bobinas decorativas para un rendimiento constante y estilo único.</p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=7:7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
 </div>
 <div class="product-row">
-<span class="product-name">Bobina De Tatuaje Liner & Shader</span>
+<span class="product-name">Modelo 7</span>
 <div class="product-tooltip">
 <img src="fotos para productos/Máquina De Tatuaje De Metal Bobina De Tatuaje Liner & Shader.webp" alt="Máquinas de bobina y rotativas" loading="lazy">
-<p>DESCRIPCIÓN</p>
+<p>Bobinas con diseño neon urbano, ideal para trazado firme y sombreado preciso.</p>
 </div>
 <div class="price-actions">
     <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=1663924215#gid=1663924215&range=8:8" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
@@ -870,6 +905,37 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="price-actions">
 <a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=591757373#gid=591757373&range=3:5" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
 </div>
+</div>
+<div class="product-row">
+<span class="product-name">Kit 1</span>
+<div class="product-tooltip">
+<img src="fotos para productos/kit 1.png" alt="Kit 1" loading="lazy">
+<p>Kit con PEN. Incluye fuente de 2AM, cable clipcord, pedal, máquina PEN, cartuchos, pigmento, cinta flex y piel sintética.</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=591757373#gid=591757373&range=6:6" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Kit 2</span>
+<div class="product-tooltip">
+<img src="fotos para productos/kit 2.png" alt="Kit 2" loading="lazy">
+<p>Kit con máquina electrómagnética. Incluye fuente digital, pedal, clip cord, tetinas, vaselina, pigmentos y piel sintética.</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=591757373#gid=591757373&range=7:7" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
+<div class="product-row">
+<span class="product-name">Kit 3</span>
+<div class="product-tooltip">
+<img src="fotos para productos/kit 3.png" alt="Kit 3" loading="lazy">
+<p>Kit con rotativa. Incluye fuente, pedal, clip cord, punteras, agujas, tetinas, stencil, pigmento, baja lenguas y vaselina.</p>
+</div>
+<div class="price-actions">
+<a href="https://docs.google.com/spreadsheets/d/1tPlQdAmsjLOlD61afZiLemJ0JL00bwwKI5XMGLEDudk/edit?gid=591757373#gid=591757373&range=8:8" target="_blank" rel="noopener" class="btn-price-row">VER PRECIO</a>
+</div>
+</div>
 </section>
 
 <section class="catalog-category" id="componentes">
@@ -881,7 +947,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Clip cord</span>
 <div class="product-tooltip">
-<img src="fotos para productos/CLIP CORD.jpg" alt="Clip cord" loading="lazy">
+<img src="fotos para productos/clip cord.jpg" alt="Clip cord" loading="lazy">
 <p>Económico, siliconado, reforzado y DC para máquina Pen.</p>
 </div>
 <div class="price-actions">
@@ -891,7 +957,7 @@ body {  background : #fdfbf7;  color : #000000;  font-family : 'Inter', sans-ser
 <div class="product-row">
 <span class="product-name">Pedal</span>
 <div class="product-tooltip">
-<img src="fotos para productos/Pedales.jpg" alt="Pedal" loading="lazy">
+<img src="fotos para productos/pedales.jpg" alt="Pedal" loading="lazy">
 <p>Económico, cuadrado, redondo y reforzado.</p>
 </div>
 <div class="price-actions">
