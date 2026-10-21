@@ -487,6 +487,27 @@ ul { list-style: none; }
   background: var(--color-white);
 }
 
+/* Variante con fondo verde (sección Sucursales del inicio) */
+.branches--teal {
+  background: var(--color-teal);
+  color: var(--color-white);
+  padding: 50px 0 60px;
+  border-top: var(--border-thick) solid var(--color-black);
+  border-bottom: var(--border-thick) solid var(--color-black);
+}
+
+.branches--teal .section-eyebrow {
+  color: var(--color-cream);
+}
+
+.branches--teal .section-title {
+  color: var(--color-white);
+}
+
+.branches--teal .branch-card {
+  color: var(--color-black);
+}
+
 .branches-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
